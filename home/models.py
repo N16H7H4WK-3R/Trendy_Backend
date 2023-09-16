@@ -1,5 +1,2 @@
-from django.db import models
-
-class Login(models.Model):
-    Email = models.CharField(max_length=100)
-    Password = models.IntegerField()
+# No need to create a custom user model for this basic setup
+from django.contrib.auth.models import User
