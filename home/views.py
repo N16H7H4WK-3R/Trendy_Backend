@@ -1,8 +1,8 @@
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
-from home.models import Person
-from home.serializer import PeopleSerializer
+from home.models import Login
+from home.serializer import LoginSerializer
 
 
 @api_view(['GET', 'POST', 'PUT'])
@@ -19,16 +19,21 @@ def index(request):
     return Response(cources)
 
 
+# Login Handeling
+
 @api_view(['GET', 'POST'])
-def person(request):
+def login(request):
+
     if request.method == 'GET':
-        objs = Person.objects.all()
-        serializer = PeopleSerializer(objs , many = True)
+        objs = Login.objects.all()
+        serializer = LoginSerializer(objs, many=True)
         return Response(serializer.data)
-    else:
+
+    elif request.method == 'POST':
         data = request.data
-        serializer = PeopleSerializer(data = data)
+        serializer = LoginSerializer(data=data)
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data)
+
         return Response(serializer.errors)

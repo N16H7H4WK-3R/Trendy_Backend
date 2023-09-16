@@ -1,5 +1,5 @@
 from django.db import models
 
-class Person(models.Model):
-    name = models.CharField(max_length=100)
-    age = models.IntegerField()
+class Login(models.Model):
+    Email = models.CharField(max_length=100)
+    Password = models.IntegerField()
