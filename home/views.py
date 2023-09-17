@@ -2,11 +2,13 @@ from rest_framework import status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from django.contrib.auth import authenticate, login
+from django.views.decorators.csrf import csrf_exempt
 
 from home.serializer import UserRegistrationSerializer, UserLoginSerializer
 
 
 @api_view(['POST'])
+@csrf_exempt
 def user_registration(request):
     if request.method == 'POST':
         serializer = UserRegistrationSerializer(data=request.data)
