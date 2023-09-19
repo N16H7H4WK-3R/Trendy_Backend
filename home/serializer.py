@@ -4,6 +4,8 @@ from django.contrib.auth.models import User
 
 class UserRegistrationSerializer(serializers.ModelSerializer):
     password = serializers.CharField(write_only=True)
+    first_name = serializers.CharField(write_only=True)
+    last_name = serializers.CharField(write_only=True)
 
     class Meta:
         model = User
@@ -14,8 +16,8 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
             username=validated_data['username'],
             email=validated_data['email'],
             password=validated_data['password'],
-            first_name=validated_data.get('first_name', 'default'),
-            last_name=validated_data.get('last_name', 'user'),
+            first_name=validated_data['first_name'],
+            last_name=validated_data['last_name'],
         )
         return user
 
