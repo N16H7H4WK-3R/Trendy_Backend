@@ -35,7 +35,7 @@ def user_login(request):
 
 
 @api_view(['PUT'])
-@permission_classes([IsAuthenticated])  # Ensure the user is authenticated
+@permission_classes([IsAuthenticated])
 def edit_profile(request):
     if request.method == 'PUT':
         user = request.user  # Get the authenticated user
