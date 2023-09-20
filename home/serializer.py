@@ -25,3 +25,9 @@ class UserRegistrationSerializer(serializers.ModelSerializer):
 class UserLoginSerializer(serializers.Serializer):
     username = serializers.CharField()
     password = serializers.CharField()
+
+
+class EditProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('first_name', 'last_name', 'email')

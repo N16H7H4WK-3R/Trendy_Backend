@@ -1,9 +1,11 @@
 from rest_framework import status
 from rest_framework.response import Response
-from rest_framework.decorators import api_view
-from django.contrib.auth import authenticate, login
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.decorators import login_required
 
-from home.serializer import UserRegistrationSerializer, UserLoginSerializer
+from home.serializer import UserRegistrationSerializer, UserLoginSerializer, EditProfileSerializer
 
 
 @api_view(['POST'])
@@ -32,3 +34,13 @@ def user_login(request):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
+@api_view(['PUT'])
+@permission_classes([IsAuthenticated])  # Ensure the user is authenticated
+def edit_profile(request):
+    if request.method == 'PUT':
+        user = request.user  # Get the authenticated user
+        serializer = EditProfileSerializer(user, data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
