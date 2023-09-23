@@ -12,6 +12,8 @@ def default(request):
                 align-items: center;
                 height: 100vh;
                 overflow: hidden;
+                color: white;
+                background-color: black;
             }
             h1 {
                 text-align: center;
