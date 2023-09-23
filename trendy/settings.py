@@ -42,9 +42,12 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
+    'api',
 ]
 
-CORS_ALLOWED_ORIGINS = ['*']
+CORS_ALLOWED_ORIGINS = [
+    'http://localhost:3000',
+]
 
 
 MIDDLEWARE = [
@@ -155,4 +158,4 @@ REST_FRAMEWORK = {
 
 MEDIA_URL = '/media/'
 
-MEDIA_ROOT = os.path.join(BASE_DIR ,'media')
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
