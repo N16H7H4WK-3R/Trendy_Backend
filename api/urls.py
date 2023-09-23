@@ -4,5 +4,6 @@ from django.conf.urls.static import static
 from .views import home
 
 urlpatterns = [
-    path('', home)
+    path('', home),
+    path('category/', include('api.category.urls'))
 ]
