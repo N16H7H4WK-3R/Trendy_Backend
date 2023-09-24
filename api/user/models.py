@@ -16,5 +16,3 @@ class CustomUser(AbstractUser):
         blank=True,
         related_name='Trendy_users_permissions'  # Change this related_name
     )
-
-#extend abstratUser of django for the custom user field and add additional fields for the model with auth
