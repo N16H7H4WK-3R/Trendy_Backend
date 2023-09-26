@@ -11,4 +11,4 @@ class CustomUser(AbstractUser):
         max_length=12, default='', null=False, blank=False)
 
     def __str__(self):
-        return f'{self.username} - {self.id}'
+        return f'{self.first_name} - {self.last_name}'
