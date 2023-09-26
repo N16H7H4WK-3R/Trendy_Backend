@@ -6,10 +6,11 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
         fields = ['id', 'username', 'first_name', 'last_name', 'email',
-                  'password', 'country' , 'phone_number']
+                  'password', 'country', 'phone_number', 'profile_image']
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
+        profile_image = validated_data.pop('profile_image', None)
         user = CustomUser(
             username=validated_data['username'],
             email=validated_data['email'],
@@ -18,6 +19,10 @@ class UserSerializer(serializers.ModelSerializer):
             country=validated_data.get('country', ''),
             phone_number=validated_data.get('phone_number', ''),
         )
+
+        if profile_image:
+            user.profile_image = profile_image
+
         user.set_password(validated_data['password'])
         user.save()
         return user
