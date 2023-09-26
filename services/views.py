@@ -11,6 +11,10 @@ from .models import CustomUser
 from .serializers import UserSerializer
 
 
+#####################################
+#########____User APIs____###########
+#####################################
+
 @api_view(['POST'])
 def register_user(request):
     if request.method == 'POST':
@@ -22,13 +26,7 @@ def register_user(request):
 
 
 @api_view(['POST'])
-# @permission_classes([IsAuthenticated])
 def user_login(request):
-    # if request.method == 'GET':
-    #     user = request.user  # Gets the authenticated user
-    #     serializer = UserSerializer(user)  # Serializes the user object
-    #     return Response(serializer.data, status=status.HTTP_200_OK)
-
     if request.method == 'POST':
         username = request.data.get('username')
         password = request.data.get('password')
@@ -46,7 +44,6 @@ def user_login(request):
         if user:
             serializer = UserSerializer(user)
             token, _ = Token.objects.get_or_create(user=user)
-            # Include user data in the response
             data = {'token': token.key, 'user': serializer.data}
             return Response(data, status=status.HTTP_200_OK)
 
@@ -58,7 +55,6 @@ def user_login(request):
 def user_logout(request):
     if request.method == 'POST':
         try:
-            # Delete the user's token to logout
             request.user.auth_token.delete()
             return Response({'message': 'Successfully logged out.'}, status=status.HTTP_200_OK)
         except Exception as e:
