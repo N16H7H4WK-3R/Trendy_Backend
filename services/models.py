@@ -6,8 +6,9 @@ class CustomUser(AbstractUser):
     email = models.EmailField(unique=True)
     first_name = models.CharField(max_length=50)
     last_name = models.CharField(max_length=50)
-
-    # Add custom fields here, if needed
+    country = models.CharField(max_length=50, default='INDIA')
+    phone_number = models.CharField(
+        max_length=12, default='', null=False, blank=False)
 
     def __str__(self):
-        return f'{self.username} -----> \t {self.id}'
+        return f'{self.username} - {self.id}'

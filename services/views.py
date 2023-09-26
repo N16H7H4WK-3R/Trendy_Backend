@@ -8,6 +8,7 @@ from django.core.exceptions import ObjectDoesNotExist
 from rest_framework.permissions import IsAuthenticated
 
 from .models import CustomUser
+from .serializers import UserSerializer
 
 
 @api_view(['POST'])
@@ -21,7 +22,13 @@ def register_user(request):
 
 
 @api_view(['POST'])
+# @permission_classes([IsAuthenticated])
 def user_login(request):
+    # if request.method == 'GET':
+    #     user = request.user  # Gets the authenticated user
+    #     serializer = UserSerializer(user)  # Serializes the user object
+    #     return Response(serializer.data, status=status.HTTP_200_OK)
+
     if request.method == 'POST':
         username = request.data.get('username')
         password = request.data.get('password')
@@ -37,8 +44,11 @@ def user_login(request):
             user = authenticate(username=username, password=password)
 
         if user:
+            serializer = UserSerializer(user)
             token, _ = Token.objects.get_or_create(user=user)
-            return Response({'token': token.key}, status=status.HTTP_200_OK)
+            # Include user data in the response
+            data = {'token': token.key, 'user': serializer.data}
+            return Response(data, status=status.HTTP_200_OK)
 
         return Response({'error': 'Invalid credentials'}, status=status.HTTP_401_UNAUTHORIZED)
 
