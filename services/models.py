@@ -8,7 +8,7 @@ class CustomUser(AbstractUser):
     last_name = models.CharField(max_length=50)
     country = models.CharField(max_length=50, default='INDIA')
     phone_number = models.CharField(
-        max_length=12, default='', null=False, blank=False)
+        max_length=18, default='', null=False, blank=False)
     profile_image = models.ImageField(upload_to='profile_images/', null=True, blank=True)
 
     def __str__(self):
