@@ -6,7 +6,7 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
         fields = ['id', 'username', 'first_name', 'last_name', 'email',
-                  'password', 'country', 'phone_number', 'profile_image']
+                  'password', 'country', 'phone_number', 'profile_image', 'created_at', 'updated_at']
         extra_kwargs = {'password': {'write_only': True}}
 
     def create(self, validated_data):
@@ -36,17 +36,12 @@ class UserSerializer(serializers.ModelSerializer):
 #     "email" : "temp@gmail.com",
 #     "first_name" : "first",
 #     "last_name" : "temp",
-#     "password" : "aryan1234"
+#     "password" : "aryan1234",
+#     "country" : "USA",
+#     "phone_number" : "8957760502"
 # }
 
 # {
 #     "email": "temp@gmail.com",
 #     "password": "aryan1234"
 # }
-
-
-# @api_view(['POST'])
-# def user_login(request):
-#     if request.method == 'POST':
-#         username = request.data.get('username')
-#         password = request.data.get('password')
