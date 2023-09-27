@@ -1,0 +1,42 @@
+name: Deploy to DigitalOcean
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: |
+          pip install -r requirements.txt
+          # Add any other setup commands if needed
+
+      - name: Deploy to DigitalOcean
+        run: |
+          ssh root@143.110.151.58 << EOF
+            cd /path/to/your/project
+            git pull origin master
+            source venv/bin/activate
+            pip install -r requirements.txt
+            python manage.py migrate
+            python manage.py collectstatic --noinput
+            systemctl restart gunicorn
+            systemctl reload nginx
+          EOF
+
+      - name: Clean up
+        run: |
+          # Disconnect from your Droplet
+          ssh-add -D
