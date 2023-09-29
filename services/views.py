@@ -12,7 +12,7 @@ from .serializers import UserSerializer
 
 
 #####################################
-######### ____User APIs____###########
+######### ____User APIs____##########
 #####################################
 
 @api_view(['POST'])
@@ -67,7 +67,7 @@ def edit_profile(request):
     try:
         user = request.user
         serializer = UserSerializer(
-            user, data=request.data, partial=True)  # Allow partial updates
+            user, data=request.data, partial=True)  # Allowing partial updates
         if serializer.is_valid():
             serializer.save()
             return Response(serializer.data, status=status.HTTP_200_OK)
