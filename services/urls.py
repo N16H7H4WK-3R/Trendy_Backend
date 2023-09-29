@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import register_user, user_login, user_logout, edit_profile, fetch_user_data, fetch_productDetailData
+from .views import register_user, user_login, user_logout, edit_profile, fetch_user_data, fetch_productData, fetch_productDetailData
 
 urlpatterns = [
     path('register/', register_user, name='register'),
@@ -7,5 +7,6 @@ urlpatterns = [
     path('logout/', user_logout, name='logout'),
     path('edit-profile/', edit_profile, name='edit_profile'),
     path('user/', fetch_user_data, name='user_data'),
-    path('data/', fetch_productDetailData, name='product_data'),
+    path('data/', fetch_productData, name='product_data'),
+    path('detail/<str:product_id>/', fetch_productDetailData, name='product_detail_data'),
 ]

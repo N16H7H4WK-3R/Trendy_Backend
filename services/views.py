@@ -88,11 +88,32 @@ def fetch_user_data(request):
         return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
+#####################################
+####### ____Product APIs____#########
+#####################################
+
+
 @api_view(['GET'])
-def fetch_productDetailData(request):
+def fetch_productData(request):
     try:
         with open('services\productDetailData.json', 'r') as json_file:
             data = json.load(json_file)
         return Response(data, status=status.HTTP_200_OK)
+    except Exception as e:
+        return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+@api_view(['GET'])
+def fetch_productDetailData(request, product_id):
+    try:
+        with open('services\productDetailData.json', 'r') as json_file:
+            data = json.load(json_file)
+        product = next(
+            (item for item in data if item["productId"] == product_id), None)
+
+        if product:
+            return Response(product, status=status.HTTP_200_OK)
+        else:
+            return Response({'error': 'Product not found'}, status=status.HTTP_404_NOT_FOUND)
     except Exception as e:
         return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
