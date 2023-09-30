@@ -23,7 +23,7 @@ class CustomUser(AbstractUser):
 class CartItem(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     item_id = models.IntegerField()  # Assuming item_id is an integer
-    quantity = models.PositiveIntegerField(default=1)
+    quantity = models.PositiveIntegerField()
     added_at = models.DateTimeField(default=timezone.localtime)
 
     def __str__(self):

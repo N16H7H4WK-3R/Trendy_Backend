@@ -8,9 +8,8 @@ from django.contrib.auth import authenticate
 from django.core.exceptions import ObjectDoesNotExist
 from rest_framework.permissions import IsAuthenticated
 
-from .models import CustomUser
-from .serializers import UserSerializer
-
+from .models import CustomUser , CartItem
+from .serializers import UserSerializer , CartItemSerializer
 
 #####################################
 ######### ____User APIs____##########
@@ -117,3 +116,21 @@ def fetch_productDetailData(request, product_id):
             return Response({'error': 'Product not found'}, status=status.HTTP_404_NOT_FOUND)
     except Exception as e:
         return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+@api_view(['POST'])
+@permission_classes([IsAuthenticated])
+def add_to_cart(request):
+    user = request.user
+    serializer = CartItemSerializer(data=request.data)
+    
+    if serializer.is_valid():
+        item_id = serializer.validated_data['item_id']
+        quantity = serializer.validated_data['quantity']
+        
+        # Add item to the cart using the CartItem model method
+        CartItem.add_to_cart(user, item_id, quantity)
+        
+        return Response({'message': 'Item added to cart successfully'}, status=status.HTTP_201_CREATED)
+    
+    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
