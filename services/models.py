@@ -17,4 +17,14 @@ class CustomUser(AbstractUser):
     updated_at = models.DateTimeField(auto_now=True)
 
     def __str__(self):
-        return f'{self.first_name} - {self.last_name}'
+        return f'{self.username}'
+
+
+class CartItem(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    item_id = models.IntegerField()  # Assuming item_id is an integer
+    quantity = models.PositiveIntegerField(default=1)
+    added_at = models.DateTimeField(default=timezone.localtime)
+
+    def __str__(self):
+        return f'Cart item for {self.user} : Item ID {self.item_id}, Quantity {self.quantity}'
