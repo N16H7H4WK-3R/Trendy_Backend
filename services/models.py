@@ -28,3 +28,16 @@ class CartItem(models.Model):
 
     def __str__(self):
         return f'Cart item for {self.user} : Item ID {self.item_id}, Quantity {self.quantity}'
+
+    @classmethod
+    def add_to_cart(cls, user, item_id, quantity):
+        # Try to get an existing cart item with the same user and item_id
+        existing_item = cls.objects.filter(user=user, item_id=item_id).first()
+
+        if existing_item:
+            # If an item with the same user and item_id exists, update its quantity
+            existing_item.quantity += quantity
+            existing_item.save()
+        else:
+            # If no existing item is found, create a new cart item
+            cls.objects.create(user=user, item_id=item_id, quantity=quantity)

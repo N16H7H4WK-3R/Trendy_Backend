@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import CustomUser
+from .models import CustomUser, CartItem
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -29,6 +29,12 @@ class UserSerializer(serializers.ModelSerializer):
 
     def validate_country(self, value):
         return value.capitalize()
+
+
+class CartItemSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CartItem
+        fields = '__all__'
 
 
 # {
