@@ -22,7 +22,7 @@ class CustomUser(AbstractUser):
 
 class CartItem(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
-    item_id = models.IntegerField()  # Assuming item_id is an integer
+    item_id = models.IntegerField()
     quantity = models.PositiveIntegerField()
     added_at = models.DateTimeField(default=timezone.localtime)
 
@@ -31,13 +31,10 @@ class CartItem(models.Model):
 
     @classmethod
     def add_to_cart(cls, user, item_id, quantity):
-        # Try to get an existing cart item with the same user and item_id
         existing_item = cls.objects.filter(user=user, item_id=item_id).first()
 
         if existing_item:
-            # If an item with the same user and item_id exists, update its quantity
             existing_item.quantity += quantity
             existing_item.save()
         else:
-            # If no existing item is found, create a new cart item
             cls.objects.create(user=user, item_id=item_id, quantity=quantity)
