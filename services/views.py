@@ -119,6 +119,11 @@ def fetch_productDetailData(request, product_id):
         return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
+#####################################
+#########____Cart APIs____###########
+#####################################
+
+
 @api_view(['POST'])
 @permission_classes([IsAuthenticated])
 def add_to_cart(request):
@@ -142,10 +147,9 @@ def add_to_cart(request):
 def fetch_user_cart_data(request):
     try:
         user = request.user
-        # Retrieve cart items for the authenticated user
         cart_items = CartItem.objects.filter(user=user)
         serializer = CartItemSerializer(
-            cart_items, many=True)  # Serialize the cart items
+            cart_items, many=True)
 
         return Response(serializer.data, status=status.HTTP_200_OK)
     except Exception as e:
