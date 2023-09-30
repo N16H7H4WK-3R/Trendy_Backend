@@ -8,12 +8,13 @@ from django.contrib.auth import authenticate
 from django.core.exceptions import ObjectDoesNotExist
 from rest_framework.permissions import IsAuthenticated
 
-from .models import CustomUser , CartItem
-from .serializers import UserSerializer , CartItemSerializer
+from .models import CustomUser, CartItem
+from .serializers import UserSerializer, CartItemSerializer
 
 #####################################
 ######### ____User APIs____##########
 #####################################
+
 
 @api_view(['POST'])
 def register_user(request):
@@ -123,14 +124,29 @@ def fetch_productDetailData(request, product_id):
 def add_to_cart(request):
     user = request.user
     serializer = CartItemSerializer(data=request.data)
-    
+
     if serializer.is_valid():
         item_id = serializer.validated_data['item_id']
         quantity = serializer.validated_data['quantity']
-        
+
         # Add item to the cart using the CartItem model method
         CartItem.add_to_cart(user, item_id, quantity)
-        
+
         return Response({'message': 'Item added to cart successfully'}, status=status.HTTP_201_CREATED)
-    
+
     return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def fetch_user_cart_data(request):
+    try:
+        user = request.user
+        # Retrieve cart items for the authenticated user
+        cart_items = CartItem.objects.filter(user=user)
+        serializer = CartItemSerializer(
+            cart_items, many=True)  # Serialize the cart items
+
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    except Exception as e:
+        return Response({'error': str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
