@@ -131,11 +131,14 @@ def add_to_cart(request):
     serializer = CartItemSerializer(data=request.data)
 
     if serializer.is_valid():
-        item_id = serializer.validated_data['item_id']
+        product_id = serializer.validated_data['product_id']
+        product_price = serializer.validated_data['product_price']
+        product_image_url = serializer.validated_data['product_image_url']
         quantity = serializer.validated_data['quantity']
 
         # Add item to the cart using the CartItem model method
-        CartItem.add_to_cart(user, item_id, quantity)
+        CartItem.add_to_cart(user, product_id, quantity, product_price,
+                             product_image_url)
 
         return Response({'message': 'Item added to cart successfully'}, status=status.HTTP_201_CREATED)
 

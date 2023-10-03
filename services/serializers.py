@@ -32,8 +32,10 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class CartItemSerializer(serializers.Serializer):
-    item_id = serializers.IntegerField()
+    product_id = serializers.IntegerField()
     quantity = serializers.IntegerField()
+    product_price = serializers.IntegerField()
+    product_image_url = serializers.CharField(max_length=500)
 
 
 # {

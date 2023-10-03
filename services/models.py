@@ -20,21 +20,31 @@ class CustomUser(AbstractUser):
         return f'{self.username}'
 
 
+
 class CartItem(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
-    item_id = models.IntegerField()
+    product_id = models.IntegerField()
+    product_price = models.IntegerField(default=0)
+    product_image_url = models.CharField(max_length=500, default='')
     quantity = models.PositiveIntegerField()
-    added_at = models.DateTimeField(default=timezone.localtime)
+    added_at = models.DateTimeField(default=timezone.now)
 
     def __str__(self):
-        return f'Cart item for {self.user} : Item ID {self.item_id}, Quantity {self.quantity}'
+        return f'Cart item for {self.user}: Item ID {self.product_id}, Quantity {self.quantity}'
 
     @classmethod
-    def add_to_cart(cls, user, item_id, quantity):
-        existing_item = cls.objects.filter(user=user, item_id=item_id).first()
+    def add_to_cart(cls, user, product_id, quantity, product_price, product_image_url):
+        cart_item, created = cls.objects.get_or_create(
+            user=user,
+            product_id=product_id,
+            defaults={
+                'quantity': quantity,
+                'product_price': product_price,
+                'product_image_url': product_image_url,
+            }
+        )
 
-        if existing_item:
-            existing_item.quantity += quantity
-            existing_item.save()
-        else:
-            cls.objects.create(user=user, item_id=item_id, quantity=quantity)
+        # If the item already exists, update the quantity
+        if not created:
+            cart_item.quantity += quantity
+            cart_item.save()
