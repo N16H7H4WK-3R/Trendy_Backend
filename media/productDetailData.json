@@ -5,10 +5,10 @@
         "category" : "womens",
         "productTitle": "Product 1",
         "productDescription": "Description for Product 2",
-        "imageUrl": "/media/ProductImages/women_dress_image_1.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_1.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_1.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_1.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_1.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_1.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_1.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_1.jpeg"
     },
     {
         "productId": "2",
@@ -16,10 +16,10 @@
         "category" : "womens",
         "productTitle": "Product 2",
         "productDescription": "Description for Product 2",
-        "imageUrl": "/media/ProductImages/women_dress_image_2.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_2.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_2.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_2.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_2.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_2.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_2.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_2.jpeg"
     },
     {
         "productId": "3",
@@ -27,10 +27,10 @@
         "category" : "womens",
         "productTitle": "Product 3",
         "productDescription": "Description for Product 3",
-        "imageUrl": "/media/ProductImages/women_dress_image_3.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_3.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_3.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_3.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_3.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_3.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_3.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_3.jpeg"
     },
     {
         "productId": "4",
@@ -38,10 +38,10 @@
         "category" : "womens",
         "productTitle": "Product 4",
         "productDescription": "Description for Product 4",
-        "imageUrl": "/media/ProductImages/women_dress_image_4.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_4.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_4.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_4.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_4.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_4.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_4.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_4.jpeg"
     },
     {
         "productId": "5",
@@ -49,10 +49,10 @@
         "category" : "womens",
         "productTitle": "Product 5",
         "productDescription": "Description for Product 5",
-        "imageUrl": "/media/ProductImages/women_dress_image_5.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_5.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_5.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_5.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_5.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_5.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_5.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_5.jpeg"
     },
     {
         "productId": "6",
@@ -60,10 +60,10 @@
         "category" : "womens",
         "productTitle": "Product 6",
         "productDescription": "Description for Product 6",
-        "imageUrl": "/media/ProductImages/women_dress_image_6.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_6.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_6.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_6.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_6.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_6.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_6.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_6.jpeg"
     },
     {
         "productId": "7",
@@ -71,10 +71,10 @@
         "category" : "womens",
         "productTitle": "Product 7",
         "productDescription": "Description for Product 7",
-        "imageUrl": "/media/ProductImages/women_dress_image_7.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_7.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_7.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_7.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_7.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_7.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_7.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_7.jpeg"
     },
     {
         "productId": "8",
@@ -82,10 +82,10 @@
         "category" : "womens",
         "productTitle": "Product 8",
         "productDescription": "Description for Product 8",
-        "imageUrl": "/media/ProductImages/women_dress_image_8.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_8.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_8.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_8.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_8.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_8.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_8.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_8.jpeg"
     },
     {
         "productId": "9",
@@ -93,10 +93,10 @@
         "category" : "womens",
         "productTitle": "Product 9",
         "productDescription": "Description for Product 9",
-        "imageUrl": "/media/ProductImages/women_dress_image_9.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_9.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_9.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_9.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_9.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_9.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_9.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_9.jpeg"
     },
     {
         "productId": "10",
@@ -104,10 +104,10 @@
         "category" : "womens",
         "productTitle": "Product 10",
         "productDescription": "Description for Product 10",
-        "imageUrl": "/media/ProductImages/women_dress_image_10.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_10.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_10.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_10.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_10.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_10.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_10.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_10.jpeg"
     },
     {
         "productId": "11",
@@ -115,10 +115,10 @@
         "category" : "womens",
         "productTitle": "Product 11",
         "productDescription": "Description for Product 11",
-        "imageUrl": "/media/ProductImages/women_dress_image_11.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_11.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_11.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_11.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_11.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_11.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_11.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_11.jpeg"
     },
     {
         "productId": "12",
@@ -126,10 +126,10 @@
         "category" : "womens",
         "productTitle": "Product 12",
         "productDescription": "Description for Product 12",
-        "imageUrl": "/media/ProductImages/women_dress_image_12.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_12.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_12.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_12.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_12.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_12.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_12.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_12.jpeg"
     },
     {
         "productId": "13",
@@ -137,10 +137,10 @@
         "category" : "womens",
         "productTitle": "Product 13",
         "productDescription": "Description for Product 13",
-        "imageUrl": "/media/ProductImages/women_dress_image_13.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_13.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_13.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_13.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_13.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_13.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_13.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_13.jpeg"
     },
     {
         "productId": "14",
@@ -148,10 +148,10 @@
         "category" : "womens",
         "productTitle": "Product 14",
         "productDescription": "Description for Product 14",
-        "imageUrl": "/media/ProductImages/women_dress_image_14.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_14.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_14.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_14.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_14.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_14.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_14.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_14.jpeg"
     },
     {
         "productId": "15",
@@ -159,10 +159,10 @@
         "category" : "womens",
         "productTitle": "Product 15",
         "productDescription": "Description for Product 15",
-        "imageUrl": "/media/ProductImages/women_dress_image_15.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_15.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_15.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_15.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_15.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_15.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_15.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_15.jpeg"
     },
     {
         "productId": "16",
@@ -170,10 +170,10 @@
         "category" : "womens",
         "productTitle": "Product 16",
         "productDescription": "Description for Product 16",
-        "imageUrl": "/media/ProductImages/women_dress_image_16.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_16.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_16.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_16.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_16.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_16.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_16.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_16.jpeg"
     },
     {
         "productId": "17",
@@ -181,10 +181,10 @@
         "category" : "womens",
         "productTitle": "Product 17",
         "productDescription": "Description for Product 17",
-        "imageUrl": "/media/ProductImages/women_dress_image_17.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_17.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_17.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_17.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_17.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_17.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_17.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_17.jpeg"
     },
     {
         "productId": "18",
@@ -192,10 +192,10 @@
         "category" : "womens",
         "productTitle": "Product 18",
         "productDescription": "Description for Product 18",
-        "imageUrl": "/media/ProductImages/women_dress_image_18.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_18.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_18.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_18.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_18.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_18.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_18.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_18.jpeg"
     },
     {
         "productId": "19",
@@ -203,10 +203,10 @@
         "category" : "womens",
         "productTitle": "Product 19",
         "productDescription": "Description for Product 19",
-        "imageUrl": "/media/ProductImages/women_dress_image_19.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_19.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_19.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_19.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_19.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_19.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_19.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_19.jpeg"
     },
     {
         "productId": "20",
@@ -214,10 +214,10 @@
         "category" : "womens",
         "productTitle": "Product 20",
         "productDescription": "Description for Product 20",
-        "imageUrl": "/media/ProductImages/women_dress_image_20.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_20.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_20.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_20.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_20.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_20.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_20.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_20.jpeg"
     },
     {
         "productId": "21",
@@ -225,10 +225,10 @@
         "category" : "womens",
         "productTitle": "Product 21",
         "productDescription": "Description for Product 21",
-        "imageUrl": "/media/ProductImages/women_dress_image_21.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_21.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_21.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_21.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_21.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_21.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_21.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_21.jpeg"
     },
     {
         "productId": "22",
@@ -236,10 +236,10 @@
         "category" : "womens",
         "productTitle": "Product 22",
         "productDescription": "Description for Product 22",
-        "imageUrl": "/media/ProductImages/women_dress_image_22.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_22.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_22.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_22.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_22.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_22.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_22.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_22.jpeg"
     },
     {
         "productId": "23",
@@ -247,10 +247,10 @@
         "category" : "womens",
         "productTitle": "Product 23",
         "productDescription": "Description for Product 23",
-        "imageUrl": "/media/ProductImages/women_dress_image_23.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_23.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_23.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_23.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_23.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_23.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_23.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_23.jpeg"
     },
     {
         "productId": "24",
@@ -258,10 +258,10 @@
         "category" : "womens",
         "productTitle": "Product 24",
         "productDescription": "Description for Product 24",
-        "imageUrl": "/media/ProductImages/women_dress_image_24.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_24.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_24.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_24.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_24.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_24.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_24.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_24.jpeg"
     },
     {
         "productId": "25",
@@ -269,10 +269,10 @@
         "category" : "womens",
         "productTitle": "Product 25",
         "productDescription": "Description for Product 25",
-        "imageUrl": "/media/ProductImages/women_dress_image_25.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_25.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_25.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_25.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_25.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_25.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_25.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_25.jpeg"
     },
     {
         "productId": "26",
@@ -280,10 +280,10 @@
         "category" : "womens",
         "productTitle": "Product 26",
         "productDescription": "Description for Product 26",
-        "imageUrl": "/media/ProductImages/women_dress_image_26.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_26.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_26.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_26.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_26.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_26.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_26.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_26.jpeg"
     },
     {
         "productId": "27",
@@ -291,10 +291,10 @@
         "category" : "womens",
         "productTitle": "Product 27",
         "productDescription": "Description for Product 27",
-        "imageUrl": "/media/ProductImages/women_dress_image_27.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_27.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_27.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_27.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_27.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_27.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_27.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_27.jpeg"
     },
     {
         "productId": "28",
@@ -302,10 +302,10 @@
         "category" : "womens",
         "productTitle": "Product 28",
         "productDescription": "Description for Product 28",
-        "imageUrl": "/media/ProductImages/women_dress_image_28.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_28.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_28.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_28.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_28.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_28.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_28.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_28.jpeg"
     },
     {
         "productId": "29",
@@ -313,10 +313,10 @@
         "category" : "womens",
         "productTitle": "Product 29",
         "productDescription": "Description for Product 29",
-        "imageUrl": "/media/ProductImages/women_dress_image_29.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_29.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_29.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_29.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_29.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_29.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_29.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_29.jpeg"
     },
     {
         "productId": "30",
@@ -324,10 +324,10 @@
         "category" : "womens",
         "productTitle": "Product 30",
         "productDescription": "Description for Product 30",
-        "imageUrl": "/media/ProductImages/women_dress_image_30.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_30.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_30.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_30.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_30.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_30.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_30.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_30.jpeg"
     },
     {
         "productId": "31",
@@ -335,10 +335,10 @@
         "category" : "womens",
         "productTitle": "Product 31",
         "productDescription": "Description for Product 31",
-        "imageUrl": "/media/ProductImages/women_dress_image_31.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_31.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_31.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_31.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_31.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_31.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_31.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_31.jpeg"
     },
     {
         "productId": "32",
@@ -346,10 +346,10 @@
         "category" : "womens",
         "productTitle": "Product 32",
         "productDescription": "Description for Product 32",
-        "imageUrl": "/media/ProductImages/women_dress_image_32.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_32.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_32.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_32.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_32.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_32.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_32.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_32.jpeg"
     },
     {
         "productId": "33",
@@ -357,10 +357,10 @@
         "category" : "womens",
         "productTitle": "Product 33",
         "productDescription": "Description for Product 33",
-        "imageUrl": "/media/ProductImages/women_dress_image_33.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_33.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_33.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_33.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_33.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_33.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_33.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_33.jpeg"
     },
     {
         "productId": "34",
@@ -368,10 +368,10 @@
         "category" : "womens",
         "productTitle": "Product 34",
         "productDescription": "Description for Product 34",
-        "imageUrl": "/media/ProductImages/women_dress_image_34.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_34.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_34.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_34.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_34.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_34.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_34.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_34.jpeg"
     },
     {
         "productId": "35",
@@ -379,10 +379,10 @@
         "category" : "womens",
         "productTitle": "Product 35",
         "productDescription": "Description for Product 35",
-        "imageUrl": "/media/ProductImages/women_dress_image_35.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_35.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_35.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_35.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_35.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_35.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_35.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_35.jpeg"
     },
     {
         "productId": "36",
@@ -390,10 +390,10 @@
         "category" : "womens",
         "productTitle": "Product 36",
         "productDescription": "Description for Product 36",
-        "imageUrl": "/media/ProductImages/women_dress_image_36.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_36.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_36.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_36.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_36.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_36.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_36.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_36.jpeg"
     },
     {
         "productId": "37",
@@ -401,10 +401,10 @@
         "category" : "womens",
         "productTitle": "Product 37",
         "productDescription": "Description for Product 37",
-        "imageUrl": "/media/ProductImages/women_dress_image_37.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_37.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_37.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_37.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_37.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_37.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_37.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_37.jpeg"
     },
     {
         "productId": "38",
@@ -412,10 +412,10 @@
         "category" : "womens",
         "productTitle": "Product 38",
         "productDescription": "Description for Product 38",
-        "imageUrl": "/media/ProductImages/women_dress_image_38.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_38.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_38.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_38.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_38.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_38.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_38.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_38.jpeg"
     },
     {
         "productId": "39",
@@ -423,10 +423,10 @@
         "category" : "womens",
         "productTitle": "Product 39",
         "productDescription": "Description for Product 39",
-        "imageUrl": "/media/ProductImages/women_dress_image_39.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_39.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_39.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_39.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_39.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_39.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_39.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_39.jpeg"
     },
     {
         "productId": "40",
@@ -434,10 +434,10 @@
         "category" : "womens",
         "productTitle": "Product 40",
         "productDescription": "Description for Product 40",
-        "imageUrl": "/media/ProductImages/women_dress_image_40.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_40.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_40.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_40.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_40.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_40.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_40.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_40.jpeg"
     },
     {
         "productId": "41",
@@ -445,10 +445,10 @@
         "category" : "womens",
         "productTitle": "Product 41",
         "productDescription": "Description for Product 41",
-        "imageUrl": "/media/ProductImages/women_dress_image_41.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_41.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_41.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_41.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_41.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_41.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_41.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_41.jpeg"
     },
     {
         "productId": "42",
@@ -456,10 +456,10 @@
         "category" : "womens",
         "productTitle": "Product 42",
         "productDescription": "Description for Product 42",
-        "imageUrl": "/media/ProductImages/women_dress_image_42.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_42.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_42.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_42.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_42.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_42.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_42.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_42.jpeg"
     },
     {
         "productId": "43",
@@ -467,10 +467,10 @@
         "category" : "womens",
         "productTitle": "Product 43",
         "productDescription": "Description for Product 43",
-        "imageUrl": "/media/ProductImages/women_dress_image_43.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_43.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_43.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_43.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_43.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_43.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_43.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_43.jpeg"
     },
     {
         "productId": "44",
@@ -478,10 +478,10 @@
         "category" : "womens",
         "productTitle": "Product 44",
         "productDescription": "Description for Product 44",
-        "imageUrl": "/media/ProductImages/women_dress_image_44.jpeg",
-        "imageUrl1": "/media/ProductImages/women_dress_image_44.jpeg",
-        "imageUrl2": "/media/ProductImages/women_dress_image_44.jpeg",
-        "imageUrl3": "/media/ProductImages/women_dress_image_44.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_44.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_44.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_44.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_44.jpeg"
     },
     {
         "productId": "45",
@@ -489,10 +489,10 @@
         "category" : "mens",
         "productTitle": "Product 45",
         "productDescription": "Description for Product 45",
-        "imageUrl": "/media/ProductImages/shirt_image_45.jpeg",
-        "imageUrl1": "/media/ProductImages/shirt_image_45.jpeg",
-        "imageUrl2": "/media/ProductImages/shirt_image_45.jpeg",
-        "imageUrl3": "/media/ProductImages/shirt_image_45.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/shirt_image_45.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/shirt_image_45.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/shirt_image_45.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/shirt_image_45.jpeg"
     },
     {
         "productId": "46",
@@ -500,10 +500,10 @@
         "category" : "mens",
         "productTitle": "Product 46",
         "productDescription": "Description for Product 46",
-        "imageUrl": "/media/ProductImages/shirt_image_46.jpeg",
-        "imageUrl1": "/media/ProductImages/shirt_image_46.jpeg",
-        "imageUrl2": "/media/ProductImages/shirt_image_46.jpeg",
-        "imageUrl3": "/media/ProductImages/shirt_image_46.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/shirt_image_46.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/shirt_image_46.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/shirt_image_46.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/shirt_image_46.jpeg"
     },
     {
         "productId": "47",
@@ -511,10 +511,10 @@
         "category" : "mens",
         "productTitle": "Product 47",
         "productDescription": "Description for Product 47",
-        "imageUrl": "/media/ProductImages/shirt_image_47.jpeg",
-        "imageUrl1": "/media/ProductImages/shirt_image_47.jpeg",
-        "imageUrl2": "/media/ProductImages/shirt_image_47.jpeg",
-        "imageUrl3": "/media/ProductImages/shirt_image_47.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/shirt_image_47.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/shirt_image_47.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/shirt_image_47.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/shirt_image_47.jpeg"
     },
     {
         "productId": "48",
@@ -522,10 +522,10 @@
         "category" : "mens",
         "productTitle": "Product 48",
         "productDescription": "Description for Product 48",
-        "imageUrl": "/media/ProductImages/shirt_image_48.jpeg",
-        "imageUrl1": "/media/ProductImages/shirt_image_48.jpeg",
-        "imageUrl2": "/media/ProductImages/shirt_image_48.jpeg",
-        "imageUrl3": "/media/ProductImages/shirt_image_48.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/shirt_image_48.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/shirt_image_48.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/shirt_image_48.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/shirt_image_48.jpeg"
     },
     {
         "productId": "49",
@@ -533,10 +533,10 @@
         "category" : "mens",
         "productTitle": "Product 49",
         "productDescription": "Description for Product 49",
-        "imageUrl": "/media/ProductImages/shirt_image_49.jpeg",
-        "imageUrl1": "/media/ProductImages/shirt_image_49.jpeg",
-        "imageUrl2": "/media/ProductImages/shirt_image_49.jpeg",
-        "imageUrl3": "/media/ProductImages/shirt_image_49.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/shirt_image_49.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/shirt_image_49.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/shirt_image_49.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/shirt_image_49.jpeg"
     },
     {
         "productId": "50",
@@ -544,10 +544,10 @@
         "category" : "mens",
         "productTitle": "Product 50",
         "productDescription": "Description for Product 50",
-        "imageUrl": "/media/ProductImages/shirt_image_50.jpeg",
-        "imageUrl1": "/media/ProductImages/shirt_image_50.jpeg",
-        "imageUrl2": "/media/ProductImages/shirt_image_50.jpeg",
-        "imageUrl3": "/media/ProductImages/shirt_image_50.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/shirt_image_50.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/shirt_image_50.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/shirt_image_50.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/shirt_image_50.jpeg"
     },
     {
         "productId": "51",
@@ -555,10 +555,10 @@
         "category" : "mens",
         "productTitle": "Product 51",
         "productDescription": "Description for Product 51",
-        "imageUrl": "/media/ProductImages/shirt_image_51.jpeg",
-        "imageUrl1": "/media/ProductImages/shirt_image_51.jpeg",
-        "imageUrl2": "/media/ProductImages/shirt_image_51.jpeg",
-        "imageUrl3": "/media/ProductImages/shirt_image_51.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/shirt_image_51.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/shirt_image_51.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/shirt_image_51.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/shirt_image_51.jpeg"
     },
     {
         "productId": "52",
@@ -566,10 +566,10 @@
         "category" : "mens",
         "productTitle": "Product 52",
         "productDescription": "Description for Product 52",
-        "imageUrl": "/media/ProductImages/shirt_image_52.jpeg",
-        "imageUrl1": "/media/ProductImages/shirt_image_52.jpeg",
-        "imageUrl2": "/media/ProductImages/shirt_image_52.jpeg",
-        "imageUrl3": "/media/ProductImages/shirt_image_52.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/shirt_image_52.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/shirt_image_52.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/shirt_image_52.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/shirt_image_52.jpeg"
     },
     {
         "productId": "53",
@@ -577,10 +577,10 @@
         "category" : "mens",
         "productTitle": "Product 53",
         "productDescription": "Description for Product 53",
-        "imageUrl": "/media/ProductImages/shirt_image_53.jpeg",
-        "imageUrl1": "/media/ProductImages/shirt_image_53.jpeg",
-        "imageUrl2": "/media/ProductImages/shirt_image_53.jpeg",
-        "imageUrl3": "/media/ProductImages/shirt_image_53.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/shirt_image_53.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/shirt_image_53.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/shirt_image_53.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/shirt_image_53.jpeg"
     },
     {
         "productId": "54",
@@ -588,10 +588,10 @@
         "category" : "mens",
         "productTitle": "Product 54",
         "productDescription": "Description for Product 54",
-        "imageUrl": "/media/ProductImages/shirt_image_54.jpeg",
-        "imageUrl1": "/media/ProductImages/shirt_image_54.jpeg",
-        "imageUrl2": "/media/ProductImages/shirt_image_54.jpeg",
-        "imageUrl3": "/media/ProductImages/shirt_image_54.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/shirt_image_54.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/shirt_image_54.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/shirt_image_54.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/shirt_image_54.jpeg"
     },
     {
         "productId": "55",
@@ -599,10 +599,10 @@
         "category" : "mens",
         "productTitle": "Product 55",
         "productDescription": "Description for Product 55",
-        "imageUrl": "/media/ProductImages/shirt_image_55.jpeg",
-        "imageUrl1": "/media/ProductImages/shirt_image_55.jpeg",
-        "imageUrl2": "/media/ProductImages/shirt_image_55.jpeg",
-        "imageUrl3": "/media/ProductImages/shirt_image_55.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/shirt_image_55.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/shirt_image_55.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/shirt_image_55.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/shirt_image_55.jpeg"
     },
     {
         "productId": "56",
@@ -610,10 +610,10 @@
         "category" : "mens",
         "productTitle": "Product 56",
         "productDescription": "Description for Product 56",
-        "imageUrl": "/media/ProductImages/shirt_image_56.jpeg",
-        "imageUrl1": "/media/ProductImages/shirt_image_56.jpeg",
-        "imageUrl2": "/media/ProductImages/shirt_image_56.jpeg",
-        "imageUrl3": "/media/ProductImages/shirt_image_56.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/shirt_image_56.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/shirt_image_56.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/shirt_image_56.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/shirt_image_56.jpeg"
     },
     {
         "productId": "57",
@@ -621,10 +621,10 @@
         "category" : "mens",
         "productTitle": "Product 57",
         "productDescription": "Description for Product 57",
-        "imageUrl": "/media/ProductImages/shirt_image_57.jpeg",
-        "imageUrl1": "/media/ProductImages/shirt_image_57.jpeg",
-        "imageUrl2": "/media/ProductImages/shirt_image_57.jpeg",
-        "imageUrl3": "/media/ProductImages/shirt_image_57.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/shirt_image_57.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/shirt_image_57.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/shirt_image_57.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/shirt_image_57.jpeg"
     },
     {
         "productId": "58",
@@ -632,10 +632,10 @@
         "category" : "mens",
         "productTitle": "Product 58",
         "productDescription": "Description for Product 58",
-        "imageUrl": "/media/ProductImages/shirt_image_58.jpeg",
-        "imageUrl1": "/media/ProductImages/shirt_image_58.jpeg",
-        "imageUrl2": "/media/ProductImages/shirt_image_58.jpeg",
-        "imageUrl3": "/media/ProductImages/shirt_image_58.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/shirt_image_58.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/shirt_image_58.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/shirt_image_58.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/shirt_image_58.jpeg"
     },
     {
         "productId": "59",
@@ -643,10 +643,10 @@
         "category" : "mens",
         "productTitle": "Product 59",
         "productDescription": "Description for Product 59",
-        "imageUrl": "/media/ProductImages/shirt_image_59.jpeg",
-        "imageUrl1": "/media/ProductImages/shirt_image_59.jpeg",
-        "imageUrl2": "/media/ProductImages/shirt_image_59.jpeg",
-        "imageUrl3": "/media/ProductImages/shirt_image_59.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/shirt_image_59.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/shirt_image_59.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/shirt_image_59.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/shirt_image_59.jpeg"
     },
     {
         "productId": "60",
@@ -654,10 +654,10 @@
         "category" : "mens",
         "productTitle": "Product 60",
         "productDescription": "Description for Product 60",
-        "imageUrl": "/media/ProductImages/shirt_image_60.jpeg",
-        "imageUrl1": "/media/ProductImages/shirt_image_60.jpeg",
-        "imageUrl2": "/media/ProductImages/shirt_image_60.jpeg",
-        "imageUrl3": "/media/ProductImages/shirt_image_60.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/shirt_image_60.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/shirt_image_60.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/shirt_image_60.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/shirt_image_60.jpeg"
     },
     {
         "productId": "61",
@@ -665,10 +665,10 @@
         "category" : "mens",
         "productTitle": "Product 61",
         "productDescription": "Description for Product 61",
-        "imageUrl": "/media/ProductImages/shirt_image_61.jpeg",
-        "imageUrl1": "/media/ProductImages/shirt_image_61.jpeg",
-        "imageUrl2": "/media/ProductImages/shirt_image_61.jpeg",
-        "imageUrl3": "/media/ProductImages/shirt_image_61.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/shirt_image_61.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/shirt_image_61.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/shirt_image_61.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/shirt_image_61.jpeg"
     },
     {
         "productId": "62",
@@ -676,10 +676,10 @@
         "category" : "mens",
         "productTitle": "Product 62",
         "productDescription": "Description for Product 62",
-        "imageUrl": "/media/ProductImages/shirt_image_62.jpeg",
-        "imageUrl1": "/media/ProductImages/shirt_image_62.jpeg",
-        "imageUrl2": "/media/ProductImages/shirt_image_62.jpeg",
-        "imageUrl3": "/media/ProductImages/shirt_image_62.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/shirt_image_62.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/shirt_image_62.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/shirt_image_62.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/shirt_image_62.jpeg"
     },
     {
         "productId": "63",
@@ -687,10 +687,10 @@
         "category" : "mens",
         "productTitle": "Product 63",
         "productDescription": "Description for Product 63",
-        "imageUrl": "/media/ProductImages/shirt_image_63.jpeg",
-        "imageUrl1": "/media/ProductImages/shirt_image_63.jpeg",
-        "imageUrl2": "/media/ProductImages/shirt_image_63.jpeg",
-        "imageUrl3": "/media/ProductImages/shirt_image_63.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/shirt_image_63.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/shirt_image_63.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/shirt_image_63.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/shirt_image_63.jpeg"
     },
     {
         "productId": "64",
@@ -698,9 +698,9 @@
         "category" : "mens",
         "productTitle": "Product 64",
         "productDescription": "Description for Product 64",
-        "imageUrl": "/media/ProductImages/shirt_image_64.jpeg",
-        "imageUrl1": "/media/ProductImages/shirt_image_64.jpeg",
-        "imageUrl2": "/media/ProductImages/shirt_image_64.jpeg",
-        "imageUrl3": "/media/ProductImages/shirt_image_64.jpeg"
+        "imageUrl": "http://127.0.0.1:8000/media/ProductImages/shirt_image_64.jpeg",
+        "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/shirt_image_64.jpeg",
+        "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/shirt_image_64.jpeg",
+        "imageUrl3": "http://127.0.0.1:8000/media/ProductImages/shirt_image_64.jpeg"
     }
 ]
