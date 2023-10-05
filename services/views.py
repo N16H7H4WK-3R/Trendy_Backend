@@ -96,7 +96,7 @@ def fetch_user_data(request):
 @api_view(['GET'])
 def fetch_productData(request):
     try:
-        with open('/media/productDetailData.json', 'r') as json_file:
+        with open('/root/Trendy_Backend/media/productDetailData.json', 'r') as json_file:
             data = json.load(json_file)
         return Response(data, status=status.HTTP_200_OK)
     except Exception as e:
@@ -106,7 +106,7 @@ def fetch_productData(request):
 @api_view(['GET'])
 def fetch_productDetailData(request, product_id):
     try:
-        with open('/media/productDetailData.json', 'r') as json_file:
+        with open('/root/Trendy_Backend/media/productDetailData.json', 'r') as json_file:
             data = json.load(json_file)
         product = next(
             (item for item in data if item["productId"] == product_id), None)
