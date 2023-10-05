@@ -34,6 +34,7 @@ INSTALLED_APPS = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
+    "http://143.198.97.194" #remove this line in production
 ]
 
 
