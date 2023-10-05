@@ -8,8 +8,8 @@ from django.contrib.auth import authenticate
 from django.core.exceptions import ObjectDoesNotExist
 from rest_framework.permissions import IsAuthenticated
 
-from .models import CustomUser, CartItem
-from .serializers import UserSerializer, CartItemSerializer
+from .models import CustomUser, CartItem, Product
+from .serializers import UserSerializer, CartItemSerializer, ProductSerializer
 
 #####################################
 ######### ____User APIs____##########
