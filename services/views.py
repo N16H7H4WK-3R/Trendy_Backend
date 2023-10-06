@@ -103,32 +103,28 @@ def fetch_user_data(request):
 @api_view(["GET"])
 def fetch_productData(request):
     try:
-        with open(
-            "/home/aryangupta/Personal_Space/Trendy_Backend/media/productDetailData.json",
-            "r",
-        ) as json_file:
-            data = json.load(json_file)
-        return Response(data, status=status.HTTP_200_OK)
+        serializer = ProductSerializer(Product.objects.all(), many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
     except Exception as e:
         return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
 @api_view(["GET"])
-def fetch_productDetailData(request, product_id):
+def fetch_productDetailData(request, productNumber):
     try:
-        with open(
-            "/home/aryangupta/Personal_Space/Trendy_Backend/media/productDetailData.json",
-            "r",
-        ) as json_file:
-            data = json.load(json_file)
-        product = next((item for item in data if item["productId"] == product_id), None)
+        product = Product.objects.get(productNumber=productNumber)
 
         if product:
-            return Response(product, status=status.HTTP_200_OK)
+            serializer = ProductSerializer(product)
+            return Response(serializer.data, status=status.HTTP_200_OK)
         else:
             return Response(
                 {"error": "Product not found"}, status=status.HTTP_404_NOT_FOUND
             )
+    except Product.DoesNotExist:
+        return Response(
+            {"error": "Product not found"}, status=status.HTTP_404_NOT_FOUND
+        )
     except Exception as e:
         return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 

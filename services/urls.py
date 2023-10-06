@@ -22,7 +22,7 @@ urlpatterns = [
     path("user/", fetch_user_data, name="user_data"),
     path("data/", fetch_productData, name="product_data"),
     path(
-        "detail/<str:product_id>/", fetch_productDetailData, name="product_detail_data"
+        "detail/<str:productNumber>/", fetch_productDetailData, name="product_detail_data"
     ),
     path("cart/", add_to_cart, name="cart"),
     path("cart-data/", fetch_user_cart_data, name="user_cart_data"),
