@@ -2,20 +2,22 @@ import json
 import os
 import django
 
-# Configure Django settings
-os.environ.setdefault("DJANGO_SETTINGS_MODULE", "your_project.settings")
+
+os.environ.setdefault("DJANGO_SETTINGS_MODULE", "trendy.settings")
 django.setup()
 
-from services.models import Product  # Import your Product model
+from services.models import Product
 
 
 def import_data_from_json(json_file_path):
-    with open(json_file_path, "r") as file:
+    with open(
+        "/home/aryangupta/Personal_Space/Trendy_Backend/productDetailData.json", "r"
+    ) as file:
         data = json.load(file)
 
     for item in data:
         product = Product(
-            productId=item["productId"],
+            productNumber=item["productNumber"],
             productPrice=item["productPrice"],
             category=item["category"],
             productTitle=item["productTitle"],
@@ -32,6 +34,6 @@ def import_data_from_json(json_file_path):
 
 if __name__ == "__main__":
     json_file_path = (
-        "path_to_your_json_file.json"  # Update with the actual path to your JSON file
+        "/home/aryangupta/Personal_Space/Trendy_Backend/productDetailData.json"
     )
     import_data_from_json(json_file_path)
