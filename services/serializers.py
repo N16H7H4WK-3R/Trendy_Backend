@@ -57,4 +57,14 @@ class FavoriteItemSerializer(serializers.ModelSerializer):
 class ProductSerializer(serializers.ModelSerializer):
     class Meta:
         model = Product
-        fields = ["id", "title", "price", "image_url"]
+        fields = [
+            "productNumber",
+            "productPrice",
+            "category",
+            "productTitle",
+            "productDescription",
+            "imageUrl",
+            "imageUrl1",
+            "imageUrl2",
+            "imageUrl3",
+        ]

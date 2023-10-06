@@ -28,12 +28,19 @@ class CustomUser(AbstractUser):
 
 
 class Product(models.Model):
-    title = models.CharField(max_length=500, default="")
-    price = models.IntegerField(default=0)
-    image_url = models.CharField(max_length=500, default="")
+    productNumber = models.IntegerField(default=0, unique=True)
+    productPrice = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
+    category = models.CharField(max_length=255, default="")
+    productTitle = models.CharField(max_length=255, default="")
+    productDescription = models.TextField(default="")
+    imageUrl = models.URLField(max_length=2000, default="")
+    imageUrl1 = models.URLField(max_length=2000, default="")
+    imageUrl2 = models.URLField(max_length=2000, default="")
+    imageUrl3 = models.URLField(max_length=2000, default="")
 
     def __str__(self):
-        return self.title
+        return self.productTitle
+
 
 
 class CartItem(models.Model):

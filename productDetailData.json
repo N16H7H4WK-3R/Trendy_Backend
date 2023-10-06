@@ -4,7 +4,7 @@
         "productPrice": "500",
         "category" : "womens",
         "productTitle": "Product 1",
-        "productDescription": "Description for Product 2",
+        "productDescription": "Description for Product 1",
         "imageUrl": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_1.jpeg",
         "imageUrl1": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_1.jpeg",
         "imageUrl2": "http://127.0.0.1:8000/media/ProductImages/women_dress_image_1.jpeg",
