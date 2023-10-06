@@ -11,6 +11,7 @@ from rest_framework.permissions import IsAuthenticated
 from .models import CustomUser, CartItem, Product
 from .serializers import UserSerializer, CartItemSerializer, ProductSerializer
 
+
 #####################################
 ######### ____User APIs____##########
 #####################################
@@ -43,9 +44,8 @@ def user_login(request):
             user = authenticate(username=username, password=password)
 
         if user:
-            serializer = UserSerializer(user)
             token, _ = Token.objects.get_or_create(user=user)
-            data = {"token": token.key, "user": serializer.data}
+            data = {"token": token.key}
             return Response(data, status=status.HTTP_200_OK)
 
         return Response(
@@ -207,9 +207,7 @@ def update_cart_item_quantity(request):
     try:
         user = request.user
         product_id = request.data.get("product_id")
-        new_quantity = int(
-            request.data.get("quantity")
-        )
+        new_quantity = int(request.data.get("quantity"))
 
         # Check for the item to exists in the user's cart
         cart_item = CartItem.objects.filter(user=user, product_id=product_id).first()
