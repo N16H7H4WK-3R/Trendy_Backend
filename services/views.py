@@ -206,9 +206,9 @@ def fetch_user_cart_data(request):
 def remove_from_cart(request):
     try:
         user = request.user
-        product_id = request.data.get("product_id")
+        product_id = request.data.get("product")
 
-        cart_item = CartItem.objects.filter(user=user, product_id=product_id).first()
+        cart_item = CartItem.objects.filter(user=user, product=product_id).first()
 
         if cart_item:
             cart_item.delete()
