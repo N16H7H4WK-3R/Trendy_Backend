@@ -106,7 +106,7 @@ def add_product(request):
     if request.method == "POST":
         serializer = ProductSerializer(
             data={
-                "productNumber": request.data.get("productNumber"),
+                "id": request.data.get("id"),
                 "productPrice": request.data.get("productPrice"),
                 "category": request.data.get("category"),
                 "productTitle": request.data.get("productTitle"),
@@ -137,9 +137,9 @@ def fetch_productData(request):
 
 
 @api_view(["GET"])
-def fetch_productDetailData(request, productNumber):
+def fetch_productDetailData(request, id):
     try:
-        product = Product.objects.get(productNumber=productNumber)
+        product = Product.objects.get(id=id)
 
         if product:
             serializer = ProductSerializer(product)
@@ -165,21 +165,27 @@ def fetch_productDetailData(request, productNumber):
 @permission_classes([IsAuthenticated])
 def add_to_cart(request):
     user = request.user
-    product = request.data.get("product_id")
-    serializer = CartItemSerializer(data=request.data)
+    product_id = request.data.get("product")
 
-    if serializer.is_valid():
-        quantity = serializer.validated_data["quantity"]
-
-        # Add item to the cart using the CartItem model method
-        CartItem.add_to_cart(user, product, quantity)
-
+    try:
+        product = Product.objects.get(id=product_id)
+    except Product.DoesNotExist:
         return Response(
-            {"message": "Item added to cart successfully"},
-            status=status.HTTP_201_CREATED,
+            {"message": "Product not found"}, status=status.HTTP_404_NOT_FOUND
         )
 
-    return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    quantity = request.data.get("quantity", 1)
+
+    cart_item, created = CartItem.objects.get_or_create(user=user, product=product)
+
+    if not created:
+        cart_item.quantity += quantity
+        cart_item.save()
+
+    return Response(
+        {"message": "Item added to cart successfully"},
+        status=status.HTTP_201_CREATED,
+    )
 
 
 @api_view(["GET"])

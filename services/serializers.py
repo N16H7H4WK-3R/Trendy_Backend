@@ -42,8 +42,43 @@ class UserSerializer(serializers.ModelSerializer):
         return value.capitalize()
 
 
+class ProductSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Product
+        fields = [
+            "id",
+            "productPrice",
+            "category",
+            "productTitle",
+            "productDescription",
+            "imageUrl",
+            "imageUrl1",
+            "imageUrl2",
+            "imageUrl3",
+        ]
+
+    def create(self, validated_data):
+        return Product.objects.create(**validated_data)
+
+
+class ProductDetailSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Product
+        fields = [
+            "id",
+            "productPrice",
+            "category",
+            "productTitle",
+            "productDescription",
+            "imageUrl",
+            "imageUrl1",
+            "imageUrl2",
+            "imageUrl3",
+        ]
+
+
 class CartItemSerializer(serializers.ModelSerializer):
-    product = serializers.PrimaryKeyRelatedField(queryset=Product.objects.all())
+    product = ProductDetailSerializer()
 
     class Meta:
         model = CartItem
@@ -57,22 +92,3 @@ class FavoriteItemSerializer(serializers.ModelSerializer):
     class Meta:
         model = FavoriteItem
         fields = ["product_id", "product", "added_at"]
-
-
-class ProductSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Product
-        fields = [
-            "productNumber",
-            "productPrice",
-            "category",
-            "productTitle",
-            "productDescription",
-            "imageUrl",
-            "imageUrl1",
-            "imageUrl2",
-            "imageUrl3",
-        ]
-
-    def create(self, validated_data):
-        return Product.objects.create(**validated_data)

@@ -17,7 +17,7 @@ def import_data_from_json(json_file_path):
 
     for item in data:
         product = Product(
-            productNumber=item["productNumber"],
+            id=item["id"],
             productPrice=item["productPrice"],
             category=item["category"],
             productTitle=item["productTitle"],

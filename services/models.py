@@ -28,7 +28,6 @@ class CustomUser(AbstractUser):
 
 
 class Product(models.Model):
-    productNumber = models.IntegerField(default=0, unique=True)
     productPrice = models.DecimalField(max_digits=10, decimal_places=2, default=0.00)
     category = models.CharField(max_length=255, default="")
     productTitle = models.CharField(max_length=255, default="")
@@ -44,7 +43,9 @@ class Product(models.Model):
 
 class CartItem(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, related_name="cart_items")
+    product = models.ForeignKey(
+        Product, on_delete=models.CASCADE, related_name="cart_items"
+    )
     quantity = models.PositiveIntegerField(default=1)
     added_at = models.DateTimeField(default=timezone.now)
 

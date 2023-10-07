@@ -20,7 +20,7 @@ class CustomUserAdmin(admin.ModelAdmin):
 
 # Custom admin class for Product
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ("productNumber", "productTitle", "productPrice")
+    list_display = ("id", "productTitle", "productPrice")
 
 
 # Registere models

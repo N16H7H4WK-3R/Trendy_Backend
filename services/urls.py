@@ -24,7 +24,7 @@ urlpatterns = [
     path("add-product/", add_product, name="add_product"),
     path("data/", fetch_productData, name="product_data"),
     path(
-        "detail/<str:productNumber>/",
+        "detail/<str:id>/",
         fetch_productDetailData,
         name="product_detail_data",
     ),
