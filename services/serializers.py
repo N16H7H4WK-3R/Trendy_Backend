@@ -68,3 +68,6 @@ class ProductSerializer(serializers.ModelSerializer):
             "imageUrl2",
             "imageUrl3",
         ]
+    
+    def create(self, validated_data):
+        return Product.objects.create(**validated_data)

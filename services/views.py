@@ -104,7 +104,17 @@ def fetch_user_data(request):
 @permission_classes([IsAdminUser])
 def add_product(request):
     if request.method == "POST":
-        serializer = ProductSerializer(data=request.data)
+        serializer = ProductSerializer(data={
+            "productNumber": request.data.get("productNumber"),
+            "productPrice": request.data.get("productPrice"),
+            "category": request.data.get("category"),
+            "productTitle": request.data.get("productTitle"),
+            "productDescription": request.data.get("productDescription"),
+            "imageUrl": request.data.get("imageUrl"),
+            "imageUrl1": request.data.get("imageUrl1"),
+            "imageUrl2": request.data.get("imageUrl2"),
+            "imageUrl3": request.data.get("imageUrl3"),
+        })
 
         if serializer.is_valid():
             serializer.save()
