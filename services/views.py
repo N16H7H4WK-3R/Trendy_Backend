@@ -244,7 +244,7 @@ def update_cart_item_quantity(request):
                 serializer = CartItemSerializer(cart_item)
                 return Response(serializer.data, status=status.HTTP_200_OK)
             else:
-                cart_item.delete()  # delete the cart item
+                cart_item.delete()  # delete the cart item if quantity is 0
                 return Response(
                     {"message": "Item removed from cart successfully"},
                     status=status.HTTP_204_NO_CONTENT,

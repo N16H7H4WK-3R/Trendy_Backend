@@ -14,13 +14,13 @@ class FavoriteItemAdmin(admin.TabularInline):
 
 # Custom admin class for CustomUser
 class CustomUserAdmin(admin.ModelAdmin):
-    list_display = ("is_superuser", "username", "email", "first_name", "last_name")
+    list_display = ("username", "is_superuser", "email", "first_name", "last_name")
     inlines = [CartItemAdmin, FavoriteItemAdmin]
 
 
 # Custom admin class for Product
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ("id", "productTitle", "productPrice")
+    list_display = ("productTitle", "id", "productPrice")
 
 
 # Registere models
