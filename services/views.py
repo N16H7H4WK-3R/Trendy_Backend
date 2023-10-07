@@ -6,7 +6,7 @@ from .serializers import UserSerializer
 from rest_framework.authtoken.models import Token
 from django.contrib.auth import authenticate
 from django.core.exceptions import ObjectDoesNotExist
-from rest_framework.permissions import IsAuthenticated
+from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
 from .models import CustomUser, CartItem, Product
 from .serializers import UserSerializer, CartItemSerializer, ProductSerializer
@@ -98,6 +98,21 @@ def fetch_user_data(request):
 #####################################
 ####### ____Product APIs____#########
 #####################################
+
+
+@api_view(["POST"])
+@permission_classes([IsAdminUser])
+def add_product(request):
+    if request.method == "POST":
+        serializer = ProductSerializer(data=request.data)
+
+        if serializer.is_valid():
+            serializer.save()
+            return Response(
+                {"message": "Product added successfully"},
+                status=status.HTTP_201_CREATED,
+            )
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
 @api_view(["GET"])

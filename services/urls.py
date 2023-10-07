@@ -5,6 +5,7 @@ from .views import (
     user_logout,
     edit_profile,
     fetch_user_data,
+    add_product,
     fetch_productData,
     fetch_productDetailData,
     add_to_cart,
@@ -20,6 +21,7 @@ urlpatterns = [
     path("logout/", user_logout, name="logout"),
     path("edit-profile/", edit_profile, name="edit_profile"),
     path("user/", fetch_user_data, name="user_data"),
+    path("add-product/", add_product, name="add_product"),
     path("data/", fetch_productData, name="product_data"),
     path(
         "detail/<str:productNumber>/", fetch_productDetailData, name="product_detail_data"
