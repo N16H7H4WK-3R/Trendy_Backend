@@ -165,18 +165,14 @@ def fetch_productDetailData(request, productNumber):
 @permission_classes([IsAuthenticated])
 def add_to_cart(request):
     user = request.user
+    product = request.data.get("product_id")
     serializer = CartItemSerializer(data=request.data)
 
     if serializer.is_valid():
-        product_id = serializer.validated_data["product_id"]
-        product_price = serializer.validated_data["product_price"]
-        product_image_url = serializer.validated_data["product_image_url"]
         quantity = serializer.validated_data["quantity"]
 
         # Add item to the cart using the CartItem model method
-        CartItem.add_to_cart(
-            user, product_id, quantity, product_price, product_image_url
-        )
+        CartItem.add_to_cart(user, product, quantity)
 
         return Response(
             {"message": "Item added to cart successfully"},

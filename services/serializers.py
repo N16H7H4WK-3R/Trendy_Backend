@@ -43,9 +43,14 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class CartItemSerializer(serializers.ModelSerializer):
+    product = serializers.PrimaryKeyRelatedField(queryset=Product.objects.all())
+
     class Meta:
         model = CartItem
-        fields = ["product_id", "product", "quantity", "added_at"]
+        fields = ["id", "user", "product", "quantity", "added_at"]
+
+    def create(self, validated_data):
+        return CartItem.objects.create(**validated_data)
 
 
 class FavoriteItemSerializer(serializers.ModelSerializer):
@@ -68,6 +73,6 @@ class ProductSerializer(serializers.ModelSerializer):
             "imageUrl2",
             "imageUrl3",
         ]
-    
+
     def create(self, validated_data):
         return Product.objects.create(**validated_data)
