@@ -9,7 +9,12 @@ from django.core.exceptions import ObjectDoesNotExist
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
 from .models import CustomUser, CartItem, Product, FavoriteItem
-from .serializers import UserSerializer, CartItemSerializer, ProductSerializer, FavoriteItemSerializer
+from .serializers import (
+    UserSerializer,
+    CartItemSerializer,
+    ProductSerializer,
+    FavoriteItemSerializer,
+)
 
 
 #####################################
@@ -84,14 +89,15 @@ def edit_profile(request):
         return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
-
 @api_view(["DELETE"])
 @permission_classes([IsAuthenticated])
 def delete_profile(request):
     try:
         user = request.user
         user.delete()
-        return Response({"message": "User deleted successfully"}, status=status.HTTP_200_OK)
+        return Response(
+            {"message": "User deleted successfully"}, status=status.HTTP_200_OK
+        )
     except Exception as e:
         return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
@@ -275,6 +281,7 @@ def update_cart_item_quantity(request):
 #####____Favrite Item APIs____#######
 #####################################
 
+
 @api_view(["POST"])
 @permission_classes([IsAuthenticated])
 def add_to_favorite(request):
@@ -288,7 +295,9 @@ def add_to_favorite(request):
             {"message": "Product not found"}, status=status.HTTP_404_NOT_FOUND
         )
 
-    favorite_item, created = FavoriteItem.objects.get_or_create(user=user, product=product)
+    favorite_item, created = FavoriteItem.objects.get_or_create(
+        user=user, product=product
+    )
 
     if not created:
         favorite_item.save()
@@ -297,6 +306,7 @@ def add_to_favorite(request):
         {"message": "Item added to favorite successfully"},
         status=status.HTTP_201_CREATED,
     )
+
 
 @api_view(["GET"])
 @permission_classes([IsAuthenticated])
@@ -307,5 +317,32 @@ def fetch_user_favorite_data(request):
         serializer = FavoriteItemSerializer(favorite_items, many=True)
 
         return Response(serializer.data, status=status.HTTP_200_OK)
+    except Exception as e:
+        return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+@api_view(["DELETE"])
+@permission_classes([IsAuthenticated])
+def remove_from_favorite(request):
+    try:
+        user = request.user
+        product_id = request.data.get("product")
+
+        favorite_item = FavoriteItem.objects.filter(
+            user=user, product=product_id
+        ).first()
+
+        if favorite_item:
+            favorite_item.delete()
+            return Response(
+                {"message": "Item removed from favorite successfully"},
+                status=status.HTTP_204_NO_CONTENT,
+            )
+        else:
+            return Response(
+                {"message": "Item not found in the favorite"},
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
     except Exception as e:
         return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
