@@ -89,6 +89,11 @@ class CartItemSerializer(serializers.ModelSerializer):
 
 
 class FavoriteItemSerializer(serializers.ModelSerializer):
+    product = ProductDetailSerializer()
+
     class Meta:
         model = FavoriteItem
-        fields = ["product_id", "product", "added_at"]
+        fields = ["id", "user", "product_id", "product", "added_at"]
+
+    def create(self, validated_data):
+        return FavoriteItem.objects.create(**validated_data)
