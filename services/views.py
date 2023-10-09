@@ -308,19 +308,6 @@ def add_to_favorite(request):
     )
 
 
-@api_view(["GET"])
-@permission_classes([IsAuthenticated])
-def fetch_user_favorite_data(request):
-    try:
-        user = request.user
-        favorite_items = FavoriteItem.objects.filter(user=user)
-        serializer = FavoriteItemSerializer(favorite_items, many=True)
-
-        return Response(serializer.data, status=status.HTTP_200_OK)
-    except Exception as e:
-        return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-
 @api_view(["DELETE"])
 @permission_classes([IsAuthenticated])
 def remove_from_favorite(request):
@@ -344,5 +331,19 @@ def remove_from_favorite(request):
                 status=status.HTTP_404_NOT_FOUND,
             )
 
+    except Exception as e:
+        return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+
+@api_view(["GET"])
+@permission_classes([IsAuthenticated])
+def fetch_user_favorite_data(request):
+    try:
+        user = request.user
+        favorite_items = FavoriteItem.objects.filter(user=user)
+        serializer = FavoriteItemSerializer(favorite_items, many=True)
+
+        return Response(serializer.data, status=status.HTTP_200_OK)
     except Exception as e:
         return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
