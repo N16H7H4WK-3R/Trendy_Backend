@@ -8,8 +8,8 @@ from django.contrib.auth import authenticate
 from django.core.exceptions import ObjectDoesNotExist
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
-from .models import CustomUser, CartItem, Product
-from .serializers import UserSerializer, CartItemSerializer, ProductSerializer
+from .models import CustomUser, CartItem, Product, FavoriteItem
+from .serializers import UserSerializer, CartItemSerializer, ProductSerializer, FavoriteItemSerializer
 
 
 #####################################
@@ -269,3 +269,31 @@ def update_cart_item_quantity(request):
 
     except Exception as e:
         return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+#####################################
+#####____Favrite Item APIs____#######
+#####################################
+
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def add_to_favorite(request):
+    user = request.user
+    product_id = request.data.get("product")
+
+    try:
+        product = Product.objects.get(id=product_id)
+    except Product.DoesNotExist:
+        return Response(
+            {"message": "Product not found"}, status=status.HTTP_404_NOT_FOUND
+        )
+
+    favorite_item, created = FavoriteItem.objects.get_or_create(user=user, product=product)
+
+    if not created:
+        favorite_item.save()
+
+    return Response(
+        {"message": "Item added to favorite successfully"},
+        status=status.HTTP_201_CREATED,
+    )

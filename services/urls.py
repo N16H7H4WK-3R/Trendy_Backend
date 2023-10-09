@@ -21,4 +21,5 @@ urlpatterns = [
         views.update_cart_item_quantity,
         name="update_cart_item_quantity",
     ),
+    path("favorite/", views.add_to_favorite, name="favorite"),
 ]
