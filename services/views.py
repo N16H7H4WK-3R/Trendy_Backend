@@ -347,3 +347,30 @@ def fetch_user_favorite_data(request):
         return Response(serializer.data, status=status.HTTP_200_OK)
     except Exception as e:
         return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+#####################################
+#####____Order Item APIs____#######
+#####################################
+
+# @api_view(["POST"])
+# @permission_classes([IsAuthenticated])
+# def user_order(request):
+#     try:
+#         user = request.user
+#         product_id = request.data.get("product")
+#         quantity = request.data.get("quantity", 1)
+
+#         order_item, created = OrderItem.objects.get_or_create(user=user, product=product)
+
+#         if not created:
+#             order_item.quantity += quantity
+#             order_item.save()
+
+#         return Response(
+#             {"message": "Item added to order successfully"},
+#             status=status.HTTP_201_CREATED,
+#         )
+
+#     except Exception as e:
+#         return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)

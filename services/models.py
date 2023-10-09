@@ -62,6 +62,27 @@ class FavoriteItem(models.Model):
         return f"Favorite item for {self.user} || Product: {self.product}"
 
 
+class OrderItem(models.Model):
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    quantity = models.PositiveIntegerField(default=1)
+    delivery_status = models.BooleanField(default=False)
+    order_at = models.DateTimeField(default=timezone.now)
+    total_price = models.DecimalField(max_digits=10, decimal_places=2)
+    
+
+    def __str__(self):
+        return f"Order item for {self.user} || Product: {self.product} || Quantity: {self.quantity}"
+
+
+
+
+
+
+
+
+
+
 # {
 #     "username" : "temp",
 #     "email" : "temp@gmail.com",
