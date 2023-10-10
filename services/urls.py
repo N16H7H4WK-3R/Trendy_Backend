@@ -24,4 +24,5 @@ urlpatterns = [
     path("favorite/", views.add_to_favorite, name="favorite"),
     path("favorite-data/", views.fetch_user_favorite_data, name="user_favorite_data"),
     path("remove-favorite/", views.remove_from_favorite, name="remove_from_favorite"),
+    path("order/", views.add_to_order, name="order"),
 ]

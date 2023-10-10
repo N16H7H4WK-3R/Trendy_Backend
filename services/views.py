@@ -8,12 +8,13 @@ from django.contrib.auth import authenticate
 from django.core.exceptions import ObjectDoesNotExist
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
-from .models import CustomUser, CartItem, Product, FavoriteItem
+from .models import CustomUser, CartItem, Product, FavoriteItem, OrderItem
 from .serializers import (
     UserSerializer,
     CartItemSerializer,
     ProductSerializer,
     FavoriteItemSerializer,
+    OrderItemSerializer,
 )
 
 
@@ -353,24 +354,30 @@ def fetch_user_favorite_data(request):
 #####____Order Item APIs____#######
 #####################################
 
-# @api_view(["POST"])
-# @permission_classes([IsAuthenticated])
-# def user_order(request):
-#     try:
-#         user = request.user
-#         product_id = request.data.get("product")
-#         quantity = request.data.get("quantity", 1)
+# api for user's order
 
-#         order_item, created = OrderItem.objects.get_or_create(user=user, product=product)
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def add_to_order(request):
+    user = request.user
+    product_id = request.data.get("product")
 
-#         if not created:
-#             order_item.quantity += quantity
-#             order_item.save()
+    try:
+        product = Product.objects.get(id=product_id)
+    except Product.DoesNotExist:
+        return Response(
+            {"message": "Product not found"}, status=status.HTTP_404_NOT_FOUND
+        )
 
-#         return Response(
-#             {"message": "Item added to order successfully"},
-#             status=status.HTTP_201_CREATED,
-#         )
+    quantity = request.data.get("quantity", 1)
 
-#     except Exception as e:
-#         return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+    order_item, created = OrderItem.objects.get_or_create(user=user, product=product)
+
+    if not created:
+        order_item.quantity += quantity
+        order_item.save()
+
+    return Response(
+        {"message": "Item added to order successfully"},
+        status=status.HTTP_201_CREATED,
+    )
