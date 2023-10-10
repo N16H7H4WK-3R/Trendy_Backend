@@ -74,19 +74,3 @@ class OrderItem(models.Model):
 
     def __str__(self):
         return f"Order item for {self.user} || Product: {self.product} || Quantity: {self.quantity}"
-
-
-# {
-#     "username" : "temp",
-#     "email" : "temp@gmail.com",
-#     "first_name" : "first",
-#     "last_name" : "temp",
-#     "password" : "aryan1234",
-#     "country" : "USA",
-#     "phone_number" : "8957760502"
-# }
-
-# {
-#     "email": "temp@gmail.com",
-#     "password": "aryan1234"
-# }
