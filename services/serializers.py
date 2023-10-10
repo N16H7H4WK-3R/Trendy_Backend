@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import CustomUser, CartItem, FavoriteItem, Product
+from .models import CustomUser, CartItem, FavoriteItem, OrderItem, Product
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -97,3 +97,22 @@ class FavoriteItemSerializer(serializers.ModelSerializer):
 
     def create(self, validated_data):
         return FavoriteItem.objects.create(**validated_data)
+
+
+class OrderItemSerializer(serializers.ModelSerializer):
+    product = ProductDetailSerializer()
+
+    class Meta:
+        model = OrderItem
+        fields = [
+            "id",
+            "user",
+            "product_id",
+            "product",
+            "quantity",
+            "total_price",
+            "ordered_at",
+        ]
+
+    def create(self, validated_data):
+        return OrderItem.objects.create(**validated_data)

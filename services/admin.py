@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import CustomUser, CartItem, FavoriteItem, Product
+from .models import CustomUser, CartItem, FavoriteItem, OrderItem, Product
 
 
 class CartItemAdmin(admin.TabularInline):
@@ -11,11 +11,14 @@ class FavoriteItemAdmin(admin.TabularInline):
     model = FavoriteItem
     extra = 0
 
+class OrderItemAdmin(admin.TabularInline):
+    model = OrderItem
+    extra = 0
 
 # Custom admin class for CustomUser
 class CustomUserAdmin(admin.ModelAdmin):
     list_display = ("username", "is_superuser", "email", "first_name", "last_name")
-    inlines = [CartItemAdmin, FavoriteItemAdmin]
+    inlines = [CartItemAdmin, FavoriteItemAdmin, OrderItemAdmin]
 
 
 # Custom admin class for Product
