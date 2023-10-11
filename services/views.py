@@ -394,3 +394,28 @@ def fetch_user_order_data(request):
         return Response(serializer.data, status=status.HTTP_200_OK)
     except Exception as e:
         return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def remove_from_order(request):
+    try:
+        user = request.user
+        product_id = request.data.get("product")
+
+        order_item = OrderItem.objects.filter(user=user, product=product_id).first()
+
+        if order_item:
+            order_item.delete()
+            return Response(
+                {"message": "Item removed from order successfully"},
+                status=status.HTTP_204_NO_CONTENT,
+            )
+        else:
+            return Response(
+                {"message": "Item not found in the order"},
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+    except Exception as e:
+        return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
