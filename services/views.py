@@ -419,3 +419,36 @@ def remove_from_order(request):
 
     except Exception as e:
         return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
+
+
+@api_view(["POST"])
+@permission_classes([IsAuthenticated])
+def update_order_item_quantity(request):
+    try:
+        user = request.user
+        product_id = request.data.get("product_id")
+        new_quantity = int(request.data.get("quantity"))
+
+        # Check for the item to exists in the user's order
+        order_item = OrderItem.objects.filter(user=user, product_id=product_id).first()
+
+        if order_item:
+            if new_quantity > 0:
+                order_item.quantity = new_quantity
+                order_item.save()  # Update the order item quantity
+                serializer = OrderItemSerializer(order_item)
+                return Response(serializer.data, status=status.HTTP_200_OK)
+            else:
+                order_item.delete()  # delete the order item if quantity is 0
+                return Response(
+                    {"message": "Item removed from order successfully"},
+                    status=status.HTTP_204_NO_CONTENT,
+                )
+        else:
+            return Response(
+                {"message": "Item not found in the order"},
+                status=status.HTTP_404_NOT_FOUND,
+            )
+
+    except Exception as e:
+        return Response({"error": str(e)}, status=status.HTTP_500_INTERNAL_SERVER_ERROR)
