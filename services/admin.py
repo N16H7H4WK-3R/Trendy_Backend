@@ -1,5 +1,13 @@
 from django.contrib import admin
-from .models import CustomUser, CartItem, FavoriteItem, Product
+from .models import (
+    CustomUser,
+    CartItem,
+    FavoriteItem,
+    Product,
+    Order,
+    OrderItem,
+    OrderHistory,
+)
 
 
 class CartItemAdmin(admin.TabularInline):
@@ -12,17 +20,36 @@ class FavoriteItemAdmin(admin.TabularInline):
     extra = 0
 
 
-# Custom admin class for CustomUser
+class OrderItemAdmin(admin.TabularInline):
+    model = OrderItem
+    extra = 0
+
+
+class OrderHistoryAdmin(admin.TabularInline):
+    model = OrderHistory
+    extra = 0
+
+
+class OrderAdmin(admin.ModelAdmin):
+    list_display = (
+        "user",
+        "order_date",
+        "payment_status",
+        "order_status",
+        "delivery_status",
+    )
+    inlines = [OrderItemAdmin, OrderHistoryAdmin]
+
+
 class CustomUserAdmin(admin.ModelAdmin):
     list_display = ("username", "is_superuser", "email", "first_name", "last_name")
     inlines = [CartItemAdmin, FavoriteItemAdmin]
 
 
-# Custom admin class for Product
 class ProductAdmin(admin.ModelAdmin):
     list_display = ("productTitle", "id", "productPrice")
 
 
-# Registere models
 admin.site.register(CustomUser, CustomUserAdmin)
 admin.site.register(Product, ProductAdmin)
+admin.site.register(Order, OrderAdmin)
