@@ -64,13 +64,3 @@ class FavoriteItem(models.Model):
     def __str__(self):
         return f"Favorite item for {self.user} || Product: {self.product}"
 
-
-class OrderItem(models.Model):
-    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
-    product = models.ForeignKey(Product, on_delete=models.CASCADE, default=1)
-    quantity = models.PositiveIntegerField(default=1)
-    total_price = models.PositiveIntegerField(default=1)
-    ordered_at = models.DateTimeField(default=timezone.now)
-
-    def __str__(self):
-        return f"Order item for {self.user} || Product: {self.product} || Quantity: {self.quantity}"
