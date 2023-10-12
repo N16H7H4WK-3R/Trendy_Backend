@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import CustomUser, CartItem, FavoriteItem, OrderItem, Product
+from .models import CustomUser, CartItem, FavoriteItem, Product
 
 
 class UserSerializer(serializers.ModelSerializer):

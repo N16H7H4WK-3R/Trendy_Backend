@@ -22,9 +22,6 @@ class CustomUser(AbstractUser):
     favorite_items = models.ManyToManyField(
         "Product", through="FavoriteItem", related_name="users_favorite", blank=True
     )
-    ordered_items = models.ManyToManyField(
-        "Product", through="OrderItem", related_name="users_order", blank=True
-    )
 
     def __str__(self):
         return self.username

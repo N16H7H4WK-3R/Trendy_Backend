@@ -8,13 +8,12 @@ from django.contrib.auth import authenticate
 from django.core.exceptions import ObjectDoesNotExist
 from rest_framework.permissions import IsAuthenticated, IsAdminUser
 
-from .models import CustomUser, CartItem, Product, FavoriteItem, OrderItem
+from .models import CustomUser, CartItem, Product, FavoriteItem
 from .serializers import (
     UserSerializer,
     CartItemSerializer,
     ProductSerializer,
     FavoriteItemSerializer,
-    OrderItemSerializer,
 )
 
 
@@ -355,3 +354,4 @@ def fetch_user_favorite_data(request):
 #####################################
 
 # api for user's order
+
