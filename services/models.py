@@ -85,3 +85,15 @@ class OrderItem(models.Model):
 
     def __str__(self):
         return f"Order item for {self.order.user} || Product: {self.product}"
+
+
+class PaymentDetail(models.Model):
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    payment_method = models.CharField(max_length=255, default="")
+    payment_status = models.CharField(max_length=50, default="PENDING")
+    payment_date = models.DateTimeField(default=timezone.now)
+
+    def __str__(self):
+        return f"Payment details for {self.order.user} || Payment Method: {self.payment_method}"
+
+
