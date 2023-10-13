@@ -62,9 +62,6 @@ class FavoriteItem(models.Model):
         return f"Favorite item for {self.user} || Product: {self.product}"
 
 
-# models for order, orderItem, paymentDetail, shippingAddress
-
-
 class Order(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     order_date = models.DateTimeField(default=timezone.now)
@@ -90,6 +87,7 @@ class OrderItem(models.Model):
 class PaymentDetail(models.Model):
     order = models.ForeignKey(Order, on_delete=models.CASCADE)
     payment_method = models.CharField(max_length=255, default="")
+    transaction_id = models.CharField(max_length=255, default="", unique=True)
     payment_status = models.CharField(max_length=50, default="PENDING")
     payment_date = models.DateTimeField(default=timezone.now)
 
