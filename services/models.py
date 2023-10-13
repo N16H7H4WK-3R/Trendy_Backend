@@ -97,3 +97,13 @@ class PaymentDetail(models.Model):
         return f"Payment details for {self.order.user} || Payment Method: {self.payment_method}"
 
 
+class ShippingAddress(models.Model):
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    address = models.CharField(max_length=255, default="")
+    city = models.CharField(max_length=255, default="")
+    state = models.CharField(max_length=255, default="")
+    zipcode = models.CharField(max_length=255, default="")
+    country = models.CharField(max_length=255, default="")
+
+    def __str__(self):
+        return f"Shipping address for {self.order.user} || Address: {self.address}"
