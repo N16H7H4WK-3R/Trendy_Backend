@@ -6,7 +6,6 @@ from .models import (
     Product,
     Order,
     OrderItem,
-    OrderHistory,
 )
 
 
@@ -25,9 +24,6 @@ class OrderItemAdmin(admin.TabularInline):
     extra = 0
 
 
-class OrderHistoryAdmin(admin.TabularInline):
-    model = OrderHistory
-    extra = 0
 
 
 class OrderAdmin(admin.ModelAdmin):
@@ -38,7 +34,7 @@ class OrderAdmin(admin.ModelAdmin):
         "order_status",
         "delivery_status",
     )
-    inlines = [OrderItemAdmin, OrderHistoryAdmin]
+    inlines = [OrderItemAdmin]
 
 
 class CustomUserAdmin(admin.ModelAdmin):

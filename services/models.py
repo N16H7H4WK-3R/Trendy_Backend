@@ -62,6 +62,9 @@ class FavoriteItem(models.Model):
         return f"Favorite item for {self.user} || Product: {self.product}"
 
 
+# models for order, orderItem, paymentDetail, shippingAddress
+
+
 class Order(models.Model):
     user = models.ForeignKey(CustomUser, on_delete=models.CASCADE)
     order_date = models.DateTimeField(default=timezone.now)
@@ -82,17 +85,3 @@ class OrderItem(models.Model):
 
     def __str__(self):
         return f"Order item for {self.order.user} || Product: {self.product}"
-
-
-class OrderHistory(models.Model):
-    order = models.ForeignKey(Order, on_delete=models.CASCADE)
-    status = models.CharField(max_length=50)
-    timestamp = models.DateTimeField(default=timezone.now)
-
-    def __str__(self):
-        return f"Order history for {self.order.user} || Status: {self.status}"
-
-
-#  order --> orderItem
-# Payments
-# Shippings
