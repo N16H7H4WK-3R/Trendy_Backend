@@ -1,5 +1,5 @@
-from django.contrib.auth.models import AbstractUser, BaseUserManager, PermissionsMixin
 from django.db import models
+from django.contrib.auth.models import AbstractUser, BaseUserManager, PermissionsMixin
 
 
 class CustomUserManager(BaseUserManager):
@@ -24,8 +24,8 @@ class CustomUserManager(BaseUserManager):
 class CustomUser(AbstractUser, PermissionsMixin):
     USER_TYPE_CHOICES = [
         ("admin", "Admin"),
-        ("user", "Normal User"),
-        ("employee", "Employee/Collaborative Business"),
+        ("user", "User"),
+        ("seller", "Seller"),
     ]
 
     user_type = models.CharField(
@@ -38,3 +38,15 @@ class CustomUser(AbstractUser, PermissionsMixin):
 
     def __str__(self):
         return self.username
+
+    @property
+    def is_normal_user(self):
+        return self.user_type == "user"
+
+    @property
+    def is_admin(self):
+        return self.user_type == "admin"
+
+    @property
+    def is_seller(self):
+        return self.user_type == "seller"

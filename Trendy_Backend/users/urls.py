@@ -1,14 +1,12 @@
 from django.urls import path
 from .views import (
-    RegisterUserView,
-    UserDetailsView,
-    UserProfileUpdateView,
-    ChangePasswordView,
+    register_user_view,
+    login_user_view,
+    fetch_user_details_view,
 )
 
 urlpatterns = [
-    path("register/", RegisterUserView.as_view(), name="register"),
-    path("user/", UserDetailsView.as_view(), name="user-details"),
-    path("user/update/", UserProfileUpdateView.as_view(), name="user-update"),
-    path("user/change-password/", ChangePasswordView.as_view(), name="change-password"),
+    path("register/", register_user_view, name="register"),
+    path("login/", login_user_view, name="login"),
+    path("user/details/", fetch_user_details_view, name="fetch-user-details"),
 ]
