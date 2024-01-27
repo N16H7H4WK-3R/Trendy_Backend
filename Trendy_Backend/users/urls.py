@@ -24,12 +24,12 @@ urlpatterns = [
     # FETCH USER DETAILS URLS
     path("user/details/", fetch_user_details_view, name="fetch-user-details"),
     path(
-        "admin/user/details/",
+        "admin/details/",
         fetch_admin_user_details_view,
         name="fetch-admin-user-details",
     ),
     path(
-        "seller/user/details/",
+        "seller/details/",
         fetch_seller_user_details_view,
         name="fetch-seller-user-details",
     ),

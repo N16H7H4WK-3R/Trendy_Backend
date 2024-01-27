@@ -91,27 +91,6 @@ def fetch_user_details_view(request):
         )
 
 
-@api_view(["POST"])
-@permission_classes([permissions.AllowAny])
-def login_user_view(request):
-    if request.method == "POST":
-        serializer = UserSerializer(data=request.data)
-        if serializer.is_valid():
-            # Generate JWT token and include it in the response
-            user = CustomUser.objects.get(username=request.data["username"])
-            refresh = RefreshToken.for_user(user)
-            token = str(refresh.access_token)
-
-            return Response(
-                {
-                    "token": token,
-                    "detail": "Login successful. Welcome User",
-                },
-                status=status.HTTP_200_OK,
-            )
-        return Response(serializer.errors, status=status.HTTP_401_UNAUTHORIZED)
-
-
 #####################################
 ######### ___ADMIN USER____##########
 #####################################
