@@ -19,3 +19,19 @@ class UserSerializer(serializers.ModelSerializer):
     def create(self, validated_data):
         user = CustomUser.objects.create_user(**validated_data)
         return user
+
+
+class AdminUserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = CustomUser
+        fields = [
+            "id",
+            "username",
+            "email",
+            "user_type",
+            "phone_number",
+            "address",
+            "is_active",
+            "is_staff",
+            "is_superuser",
+        ]

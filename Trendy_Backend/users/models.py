@@ -40,13 +40,13 @@ class CustomUser(AbstractUser, PermissionsMixin):
         return self.username
 
     @property
-    def is_normal_user(self):
-        return self.user_type == "user"
-
-    @property
     def is_admin(self):
         return self.user_type == "admin"
 
     @property
     def is_seller(self):
         return self.user_type == "seller"
+
+    @property
+    def is_user(self):
+        return self.user_type == "user"
