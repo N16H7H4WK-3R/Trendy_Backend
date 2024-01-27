@@ -5,7 +5,7 @@ from .models import CustomUser
 
 class CustomUserAdmin(UserAdmin):
     list_display = ("username", "email", "user_type", "is_staff", "is_superuser")
-    list_filter = ("user_type", "is_staff", "is_superuser")
+    list_filter = ("user_type", "is_staff", "is_superuser", "groups")
     search_fields = ("username", "email")
     ordering = ("username",)
 
@@ -43,6 +43,7 @@ class CustomUserAdmin(UserAdmin):
                     "user_type",
                     "is_staff",
                     "is_superuser",
+                    "groups",
                 ),
             },
         ),

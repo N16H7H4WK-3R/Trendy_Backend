@@ -1,6 +1,7 @@
 from django.db import models
 from django.contrib.auth.models import AbstractUser, BaseUserManager, PermissionsMixin
 from django.utils.translation import gettext_lazy as _
+from django.contrib.auth.models import Group
 
 
 class CustomUserManager(BaseUserManager):
@@ -34,6 +35,7 @@ class CustomUser(AbstractUser, PermissionsMixin):
     )
     phone_number = models.CharField(max_length=15, blank=True, null=True)
     address = models.TextField(blank=True, null=True)
+    groups = models.ManyToManyField(Group, blank=True)
 
     objects = CustomUserManager()
 
@@ -93,3 +95,15 @@ class CustomUser(AbstractUser, PermissionsMixin):
 
     def has_permission_to_update_admins_data(self, obj):
         return self.has_admin_permission(obj)
+
+    def has_permission_to_view_group_data(self, obj):
+        return self.is_authenticated and obj in self.groups.all()
+
+    def has_permission_to_edit_group_data(self, obj):
+        return self.has_permission_to_view_group_data(obj)
+
+    def has_permission_to_delete_group_data(self, obj):
+        return self.has_permission_to_view_group_data(obj)
+
+    def has_permission_to_update_group_data(self, obj):
+        return self.has_permission_to_view_group_data(obj)
