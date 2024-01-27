@@ -51,3 +51,45 @@ class CustomUser(AbstractUser, PermissionsMixin):
     @property
     def is_user(self):
         return self.user_type == "user"
+
+    def has_permission_to_view(self, obj):
+        return self.is_authenticated and obj == self
+
+    def has_permission_to_edit(self, obj):
+        return self.has_permission_to_view(obj)
+
+    def has_permission_to_delete(self, obj):
+        return self.has_permission_to_view(obj)
+
+    def has_permission_to_update(self, obj):
+        return self.has_permission_to_view(obj)
+
+    def has_seller_permission(self, obj):
+        return self.is_authenticated and self.is_seller and obj == self
+
+    def has_permission_to_view_sellers_data(self, obj):
+        return self.is_authenticated and self.is_seller and obj == self
+
+    def has_permission_to_edit_sellers_data(self, obj):
+        return self.has_seller_permission(obj)
+
+    def has_permission_to_delete_sellers_data(self, obj):
+        return self.has_seller_permission(obj)
+
+    def has_permission_to_update_sellers_data(self, obj):
+        return self.has_seller_permission(obj)
+
+    def has_admin_permission(self, obj):
+        return self.is_authenticated and self.is_admin and obj == self
+
+    def has_permission_to_view_admins_data(self, obj):
+        return self.is_authenticated and self.is_admin and obj == self
+
+    def has_permission_to_edit_admins_data(self, obj):
+        return self.has_admin_permission(obj)
+
+    def has_permission_to_delete_admins_data(self, obj):
+        return self.has_admin_permission(obj)
+
+    def has_permission_to_update_admins_data(self, obj):
+        return self.has_admin_permission(obj)
