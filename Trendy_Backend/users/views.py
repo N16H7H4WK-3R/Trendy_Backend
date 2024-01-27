@@ -4,7 +4,7 @@ from rest_framework.response import Response
 from rest_framework_simplejwt.tokens import RefreshToken
 from .models import CustomUser
 from .serializers import UserSerializer, AdminUserSerializer, SellerUserSerializer
-from django.contrib.auth.decorators import user_passes_test
+from django.contrib.auth import authenticate
 
 
 ####################################################################################
@@ -166,21 +166,24 @@ def register_user_view(request):
 @permission_classes([permissions.AllowAny])
 def login_admin_user_view(request):
     if request.method == "POST":
-        serializer = UserSerializer(data=request.data)
-        if serializer.is_valid():
-            # Generate JWT token and include it in the response
-            user = CustomUser.objects.get(username=request.data["username"])
+        username = request.data.get("username", "")
+        password = request.data.get("password", "")
+        user = authenticate(request, username=username, password=password)
+        if user and user.is_admin:
             refresh = RefreshToken.for_user(user)
             token = str(refresh.access_token)
-
             return Response(
                 {
-                    "token": token,
                     "detail": "Login successful. Welcome Admin",
+                    "token": token,
                 },
                 status=status.HTTP_200_OK,
             )
-        return Response(serializer.errors, status=status.HTTP_401_UNAUTHORIZED)
+        else:
+            return Response(
+                {"detail": "Invalid credentials or user is not an admin."},
+                status=status.HTTP_401_UNAUTHORIZED,
+            )
 
 
 # SELLER LOGIN
@@ -190,21 +193,26 @@ def login_admin_user_view(request):
 @permission_classes([permissions.AllowAny])
 def login_seller_user_view(request):
     if request.method == "POST":
-        serializer = UserSerializer(data=request.data)
-        if serializer.is_valid():
-            # Generate JWT token and include it in the response
-            user = CustomUser.objects.get(username=request.data["username"])
+        username = request.data.get("username", "")
+        password = request.data.get("password", "")
+
+        user = authenticate(request, username=username, password=password)
+
+        if user and user.is_seller:
             refresh = RefreshToken.for_user(user)
             token = str(refresh.access_token)
-
             return Response(
                 {
-                    "token": token,
                     "detail": "Login successful. Welcome Seller",
+                    "token": token,
                 },
                 status=status.HTTP_200_OK,
             )
-        return Response(serializer.errors, status=status.HTTP_401_UNAUTHORIZED)
+        else:
+            return Response(
+                {"detail": "Invalid credentials or user is not a seller."},
+                status=status.HTTP_401_UNAUTHORIZED,
+            )
 
 
 # USER LOGIN
@@ -214,21 +222,26 @@ def login_seller_user_view(request):
 @permission_classes([permissions.AllowAny])
 def login_user_view(request):
     if request.method == "POST":
-        serializer = UserSerializer(data=request.data)
-        if serializer.is_valid():
-            # Generate JWT token and include it in the response
-            user = CustomUser.objects.get(username=request.data["username"])
+        username = request.data.get("username", "")
+        password = request.data.get("password", "")
+
+        user = authenticate(request, username=username, password=password)
+
+        if user:
             refresh = RefreshToken.for_user(user)
             token = str(refresh.access_token)
-
             return Response(
                 {
+                    "detail": "Login successful. Wecome User",
                     "token": token,
-                    "detail": "Login successful.",
                 },
                 status=status.HTTP_200_OK,
             )
-        return Response(serializer.errors, status=status.HTTP_401_UNAUTHORIZED)
+        else:
+            return Response(
+                {"detail": "Invalid credentials."},
+                status=status.HTTP_401_UNAUTHORIZED,
+            )
 
 
 ####################################################################################
