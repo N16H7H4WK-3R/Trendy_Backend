@@ -10,32 +10,21 @@ class CustomUserAdminForm(forms.ModelForm):
         fields = "__all__"
 
 
-class CustomUser(UserAdmin):
-    model = User
+class CustomUserAdmin(UserAdmin):
+    form = CustomUserAdminForm
+
     list_display = (
-        "email",
         "id",
+        "email",
+        "first_name",
+        "last_name",
         "role",
-        "date_joined",
         "is_active",
-        "created_by",
     )
     list_filter = ("role", "is_active")
     search_fields = ("email", "first_name", "last_name")
     ordering = ("id",)
-    form = CustomUserAdminForm
-
-    def get_readonly_fields(self, request, obj=None):
-        readonly_fields = super().get_readonly_fields(request, obj)
-        # Add the fields you want to make read-only here
-        return readonly_fields + (
-            "uid",
-            "password",
-            "modified_date",
-            "last_login",
-            "created_by",
-            "date_joined",
-        )
+    list_display_links = ("email",)
 
     fieldsets = (
         (
@@ -45,6 +34,7 @@ class CustomUser(UserAdmin):
                     "email",
                     "first_name",
                     "last_name",
+                    "mobile_number",
                     "role",
                     "password",
                     "uid",
@@ -52,14 +42,13 @@ class CustomUser(UserAdmin):
             },
         ),
         (
-            "Permissions",
-            {"fields": ("is_active", "is_staff", "is_superuser", "is_deleted")},
-        ),
-        (
             "Important dates",
             {"fields": ("date_joined", "modified_date", "last_login")},
         ),
-        ("Audit Info", {"fields": ["created_by", "modified_by"]}),
+        (
+            "Permissions",
+            {"fields": ("is_active", "is_staff", "is_superuser", "is_deleted")},
+        ),
     )
     add_fieldsets = (
         (
@@ -78,5 +67,16 @@ class CustomUser(UserAdmin):
         ),
     )
 
+    def get_readonly_fields(self, request, obj=None):
+        readonly_fields = super().get_readonly_fields(request, obj)
+        # Add the fields you want to make read-only here
+        return readonly_fields + (
+            "uid",
+            "password",
+            "modified_date",
+            "last_login",
+            "date_joined",
+        )
 
-admin.site.register(User, CustomUser)
+
+admin.site.register(User, CustomUserAdmin)

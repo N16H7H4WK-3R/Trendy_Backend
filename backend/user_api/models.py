@@ -19,7 +19,7 @@ class User(AbstractBaseUser, PermissionsMixin):
 
     class Meta:
         verbose_name = "user"
-        verbose_name_plural = "All users"
+        verbose_name_plural = "Users"
 
     uid = models.UUIDField(
         unique=True,
@@ -30,6 +30,7 @@ class User(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(unique=True)
     first_name = models.CharField(max_length=30, blank=True)
     last_name = models.CharField(max_length=50, blank=True)
+    mobile_number = models.CharField(max_length=15, unique=True, blank=True)
     role = models.PositiveSmallIntegerField(
         choices=ROLE_CHOICES, blank=True, null=True, default=3
     )
@@ -39,8 +40,6 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_superuser = models.BooleanField(default=False)
     is_staff = models.BooleanField(default=False)
     modified_date = models.DateTimeField(default=timezone.now)
-    created_by = models.EmailField()
-    modified_by = models.EmailField()
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []

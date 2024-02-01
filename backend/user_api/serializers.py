@@ -6,26 +6,54 @@ from rest_framework_simplejwt.tokens import RefreshToken
 from .models import User
 
 
-class UserRegistrationSerializer(serializers.ModelSerializer):
+# CUSTOMER REGISTRATION SERIALIZER
+class CustomerRegistrationSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ("email", "password")
+        fields = ("first_name", "last_name", "mobile_number", "email", "password")
 
     def create(self, validated_data):
-        auth_user = User.objects.create_user(**validated_data)
+        auth_user = User.objects.create_customer(**validated_data)
         return auth_user
 
 
+# ADMIN REGISTRATION SERIALIZER
 class AdminRegistrationSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ("email", "password", "role")
+        fields = (
+            "first_name",
+            "last_name",
+            "mobile_number",
+            "email",
+            "password",
+            "role",
+        )
 
     def create(self, validated_data):
         auth_user = User.objects.create_superuser(**validated_data)
         return auth_user
 
 
+# ADMIN REGISTRATION SERIALIZER
+class SellerRegistrationSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = (
+            "first_name",
+            "last_name",
+            "mobile_number",
+            "email",
+            "password",
+            "role",
+        )
+
+    def create(self, validated_data):
+        auth_user = User.objects.create_seller(**validated_data)
+        return auth_user
+
+
+# USER LOGIN SERIALIZER
 class UserLoginSerializer(serializers.Serializer):
     email = serializers.EmailField()
     password = serializers.CharField(max_length=128, write_only=True)
@@ -66,7 +94,16 @@ class UserLoginSerializer(serializers.Serializer):
             raise serializers.ValidationError("Invalid login credentials")
 
 
+# USER LIST SERIALIZER ( FOR ADMIN ONLY )
 class UserListSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ("email", "role")
+        fields = (
+            "id",
+            "role",
+            "email",
+            "first_name",
+            "last_name",
+            "mobile_number",
+            "date_joined",
+        )
