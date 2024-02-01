@@ -12,14 +12,14 @@ from .managers import CustomUserManager
 class User(AbstractBaseUser, PermissionsMixin):
     # These fields tie to the roles!
     ADMIN = 1
-    MANAGER = 2
-    EMPLOYEE = 3
+    SELLER = 2
+    CUSTOMER = 3
 
-    ROLE_CHOICES = ((ADMIN, "Admin"), (MANAGER, "Manager"), (EMPLOYEE, "Employee"))
+    ROLE_CHOICES = ((ADMIN, "Admin"), (SELLER, "Seller"), (CUSTOMER, "Customer"))
 
     class Meta:
         verbose_name = "user"
-        verbose_name_plural = "users"
+        verbose_name_plural = "All users"
 
     uid = models.UUIDField(
         unique=True,
